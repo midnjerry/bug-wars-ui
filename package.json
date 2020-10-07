@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --aot --output-path dist"
+    "postinstall": "ng build --aot --prod --output-path dist"
   },
   "engines": {
     "node": "12.18.1",
