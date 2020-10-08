@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "bug-wars-ui"
+    }
+  },
+  "defaultProject": "bug-wars-ui",
+  "cli": {
+    "analytics": "5c049278-c3cd-4f34-9c73-79aa0ad556f7"
+  }
 }
