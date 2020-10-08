@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainMenuComponent } from './pages/main-menu/main-menu.component';
 import { GameLobbyComponent } from './pages/game-lobby/game-lobby.component';
+import { AiScriptEditorComponent } from './pages/ai-script-editor/ai-script-editor.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainMenuComponent,
-    GameLobbyComponent
+    GameLobbyComponent,
+    AiScriptEditorComponent
   ],
   imports: [
     BrowserModule,
