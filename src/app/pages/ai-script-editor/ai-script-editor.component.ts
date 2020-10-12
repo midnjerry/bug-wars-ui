@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ai-script-editor.component.css']
 })
 export class AiScriptEditorComponent implements OnInit {
+  scriptText: string = '';
 
   constructor() { }
 
