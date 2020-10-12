@@ -1,0 +1,17 @@
+<div id="editor-container" class="row">
+  <div id="editor-line-numbers" class="column" [ngStyle]="{'top.px': scrollTop}">
+    <div
+      id="editor-line-number"
+      (scroll)="handleScroll($event)"
+
+      *ngFor="let num of lineCount">
+        {{num}}
+    </div>
+  </div>
+  <textarea
+    id="editor-textarea"
+    placeholder="Enter your commands here"
+    [value]="script"
+    (keyup)="handleChange($event)"
+    (scroll)="handleScroll($event)"></textarea>
+</div>
