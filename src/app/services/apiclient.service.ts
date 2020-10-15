@@ -20,4 +20,9 @@ export class APIClientService {
     return this.http.get<AIScript[]>(url);
   }
   constructor(private http: HttpClient) { }
+
+  saveAI(input: AIScript){
+    const url = environment.getAllAiScriptUrl;
+    return this.http.post<AIScriptResponse>(url, input);
+  }
 }
