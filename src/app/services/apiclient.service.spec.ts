@@ -7,6 +7,7 @@ import {
 } from '@angular/common/http/testing';
 import { AIScript } from '../models/aiscript';
 import { environment } from 'src/environments/environment';
+import { AIScriptResponse } from '../models/aiscript.response';
 
 describe('APIClientService', () => {
   let httpClient: HttpClient;
@@ -48,4 +49,25 @@ describe('APIClientService', () => {
       req.flush(response);
     });
   });
+
+  describe('createAIScript()', () => {
+    it('should call endpoint from environment file and retrieve records', () => {
+      const input: AIScript = new AIScript(null, 'Meg', 'jump jump');
+      const save: AIScript = new AIScript(1, 'Meg', 'jump jump');
+
+      const response: AIScriptResponse = new AIScriptResponse(save, null);
+
+      apiClient.saveAI(input).subscribe((data) => {
+        expect(data).toEqual(response);
+      });
+
+      const req = httpTestingController.expectOne(
+        environment.getAllAiScriptUrl
+      );
+
+      expect(req.request.method).toEqual('POST');
+      req.flush(response);
+    });
+  });
+
 });
