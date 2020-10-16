@@ -1,0 +1,23 @@
+/* .lobby{
+    display: flex;
+    flex-wrap: wrap;
+    } */
+.lobby-title{
+    padding: 5%;
+}
+.btn{
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 4px;
+    margin-left: 80%;
+    margin-right: 5%;
+    text-align: center;
+  }
+  
+  .btn-gray{
+    background-color: #626062;
+    color: white;
+  }
+   .comp-space{
+      justify-content: space-around;
+  } 
