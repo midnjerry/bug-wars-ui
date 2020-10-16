@@ -1,10 +1,18 @@
 <div class="column">
-  <h1>AI Script Editor</h1>
-  <div>
-    <label for="title">Title</label>
-    <input id="title">
+  <div class="header">
+    <div class="h1-row">
+    <h1>AI Script Editor</h1>
+    <a class="icon-link" routerLink="/home">
+    <mat-icon class="menu-icon" aria-hidden="false" aria-label="home icon">home</mat-icon>
+  </a>
   </div>
-  <app-script-editor [(script)]="scriptText"></app-script-editor>
-  <button>Save Code</button>
-  <button>Test Code</button>
-</div>
+    <h2>Enter the code for your AI here.</h2>
+  </div>
+    <div class="row title-row">
+      <input class="editor-title inner" id="title" placeholder="Enter your AI title here">
+      <button mat-button class="primary inner">Save Code</button>
+      <button mat-button class="primary inner">Test Code</button>
+      <p class="return-message inner">Your code is broken! Look at Line 112.</p>
+    </div>
+    <app-script-editor [(script)]="scriptText"></app-script-editor>
+  </div>
