@@ -1,0 +1,28 @@
+server.port: 8080
+spring.application.name: bug-wars-ui
+
+# This is zuul configuration.
+# For a good description of Zuul in general: https://howtodoinjava.com/spring-cloud/spring-cloud-api-gateway-zuul/
+# For a good reference manual for application.yml: https://cloud.spring.io/spring-cloud-netflix/multi/multi__router_and_filter_zuul.html
+zuul:
+  # Service will be mapped under the /api URI
+  # By default it is stripped
+  prefix: /api
+  routes:
+    # This is the capture point:  host + /api + /ai + /rest/Of/Path
+    ai:
+      # Redirected to: bug-wars-ai-crud + /ai/**  where  ** = /rest/Of/Path
+      path: /ai/**
+      serviceId: bug-wars-ai-crud
+
+---
+spring.profiles: local, default
+eureka:
+  password: password
+  instance:
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone: http://user:${eureka.password}@${eureka.instance.hostname}:8761/eureka/
+
+

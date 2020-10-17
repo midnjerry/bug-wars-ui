@@ -2,7 +2,7 @@
   "name": "bug-wars-ui",
   "version": "0.0.0",
   "scripts": {
-    "start:prod":"node server.js",  
+    "start:prod": "node server.js",
     "ng": "ng",
     "start": "node index.js",
     "build": "ng build",
