@@ -17,7 +17,16 @@
   justify-content: space-evenly;
 }
 
+.selector-row{
+  justify-content: space-evenly;
+}
+
 .selectors{
   width: 50%;
   justify-content: space-evenly;
+}
+
+.ai-selector{
+  font-size: 20px;
+  padding: 20px;
 }
