@@ -1,0 +1,20 @@
+.ai{
+    padding: 5%;
+}
+select{
+    width: 200px;
+    height: 40px;
+    background-color: lightgrey;
+  }
+  .custom-select{
+    padding: 15%;
+    padding-top: 5%;
+    padding-left: 5%;
+    align-items: center;
+  }
+  .bug{
+    height: 26px;
+    width: 26px;
+    padding-right: 10%;
+    padding-bottom: 5%;
+  }
