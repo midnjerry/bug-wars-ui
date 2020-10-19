@@ -46,9 +46,7 @@ jobs:
           key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
           restore-keys: |
             ${{ runner.os }}-maven-  
-      
-      - name: Build and test project
-        run: mvn -f github-actions-java-maven/pom.xml clean verify
+      - run: mvn -f github-actions-java-maven/pom.xml clean verify
         
       - name: Deploy to Heroku
       - uses: akhileshns/heroku-deploy@v3.5.7 # This is the action
