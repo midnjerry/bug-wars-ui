@@ -18,6 +18,10 @@ zuul:
       # Redirected to: bug-wars-ai-crud + /ai/**  where  ** = /rest/Of/Path
       path: /**
       serviceId: bug-wars-ai-crud
+
+  # you call POST localhost:8080/api/ai/**
+  # it gets redirect to:
+  # localhost:8082/ai/**
 ---
 spring.profiles: local, default
 eureka:
