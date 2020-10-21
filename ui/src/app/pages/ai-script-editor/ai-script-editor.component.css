@@ -20,17 +20,6 @@
   align-self: flex-end;
 }
 
-.primary {
-  font-family: Helvetica, sans-serif;
-  border-radius: 4px;
-  border: none;
-  background-color: rgb(178,178,178);
-  color: white;
-  font-size:16px;
-  padding-left: 40px;
-  padding-right: 40px;
-}
-
 .btn-grp {
   margin-left: 10px;
   margin-right: 10px;
@@ -67,11 +56,11 @@ h2{
   justify-content: space-between;
 }
 
-.menu-icon
-{
-  padding:20px;
+.icon-link{
+  padding: 20px;
+  color: inherit;
 }
 
-.icon-link{
-  color: inherit;
+.btn-primary:hover {
+  background-color: #666666;
 }
