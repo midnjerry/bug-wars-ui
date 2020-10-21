@@ -14,5 +14,17 @@
   flex-direction: row;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.btn-primary {
+  text-decoration: none;
+  font-family: Helvetica, sans-serif;
+  border-radius: 4px;
+  border: none;
+  background-color: #858585;
+  color: white;
+  font-size:16px;
+  padding: 10px 40px 10px 40px;
+}
+
+.btn-primary:hover {
+  background-color: #666666;
+}

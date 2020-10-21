@@ -5,29 +5,29 @@
   justify-content: center;
   align-items: center;
 }
+
 h1{
   text-align: center;
   font-size: 75px;
   padding: 10px;
 }
+
 h2{
   text-align: center;
   padding: 10px;
 }
 
-.btn{
-  text-decoration: none;
-  padding: 10px;
-  border-radius: 4px;
+.btn-row {
+  margin: 50px;
 }
 
-.btn-grey{
-  background-color: rgb(178,178,178);
-  color: white;
+.btn-row > a{
+  margin: 20px;
 }
 
-.btn-row{
-justify-content: space-evenly;
+.btn-menu{
+  font-size: 20px;
+  padding: 20px 40px 20px 40px;
 }
 
 .row{
