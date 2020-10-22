@@ -1,3 +1,5 @@
+
+
 .lobby{
     display: flexs;
 }
@@ -14,6 +16,7 @@
 }
 
 .main-row{
+  /* display: flex; */
   justify-content: space-evenly;
 }
 
@@ -29,4 +32,12 @@
 .ai-selector{
   font-size: 20px;
   padding: 20px;
+}
+
+.start-btn{
+  margin-top: 2em;
+}
+
+.select select:focus{
+  background-color: #858585;
 }
