@@ -1,47 +1,16 @@
-<div class="lobby">
+<div class="lobby grid-container">
   <div class="lobby-title">
     <h1>Game Lobby</h1>
     <h4>Select your AI options and map</h4>
   </div>
   <div class="row main-row">
     <div class="column">
-      <div class="container">
+      <div class="container game-map">
         <map-carousel [slides]="slides"></map-carousel>
       </div>
     </div>
-    <div class="column selectors">
-      <div class="row selector-row">
-        <select class="ai-selector select">
-          <option>Select your AI</option>
-          <option>this</option>
-          <option>that</option>
-          <option>the</option>
-          <option>other</option>
-        </select>
-        <select class="ai-selector">
-          <option>Select your AI</option>
-          <option>this</option>
-          <option>that</option>
-          <option>the</option>
-          <option>other</option>
-        </select>
-      </div>
-      <div class="row selector-row">
-        <select class="ai-selector">
-          <option>Select your AI</option>
-          <option>this</option>
-          <option>that</option>
-          <option>the</option>
-          <option>other</option>
-        </select>
-        <select class="ai-selector select">
-          <option>Select your AI</option>
-          <option>this</option>
-          <option>that</option>
-          <option>the</option>
-          <option>other</option>
-        </select>
-      </div>
-    </div>
+  </div>
+  <div class="drop">
+    <app-ai-dropdowns></app-ai-dropdowns>
   </div>
 </div>
