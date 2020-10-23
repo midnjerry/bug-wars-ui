@@ -52,11 +52,13 @@ jobs:
       - name: Build Spring Boot project with Maven
         run: mvn -B package --file pom.xml
          
-      - name: Deploy to Heroku
+      - name: Login to Heroku
         uses: akhileshns/heroku-deploy@v3.5.7 # This is the action
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "bug-wars"
           heroku_email: "jerry.codecamp@gmail.com"
-          appdir: "target" # <- location of jar
-          
+          justlogin: true
+      
+      - name: Deploy to Heroku
+      - run: heroku deploy:jar target/bug-wars-ui-0.0.1-SNAPSHOT.jar --app bug-wars
