@@ -36,3 +36,8 @@ h2{
 
 
 
+@media screen and (max-width: 415px) {
+  .btn-row{
+    display: flex;
+  }
+}
