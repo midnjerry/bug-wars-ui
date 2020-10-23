@@ -61,4 +61,4 @@ jobs:
           justlogin: true
       
       - name: Deploy to Heroku
-      - run: heroku deploy:jar target/bug-wars-ui-0.0.1-SNAPSHOT.jar --app bug-wars
+        run: heroku deploy:jar target/bug-wars-ui-0.0.1-SNAPSHOT.jar --app bug-wars
