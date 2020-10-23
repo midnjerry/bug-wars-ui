@@ -52,6 +52,9 @@
 }
 
 @media screen and (max-width: 415px) {
+  .nav-space{
+    height:25px;
+  }
   .grid-container {
     display: grid;
     width: 1fr;

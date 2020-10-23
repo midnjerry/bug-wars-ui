@@ -16,6 +16,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     AiScriptEditorComponent,
     ScriptEditorComponent,
     AiDropdownsComponent,
-    MapCarouselComponent
+    MapCarouselComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
