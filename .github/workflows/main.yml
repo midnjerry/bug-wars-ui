@@ -45,14 +45,13 @@ jobs:
       - name: Cache local Maven repository
         uses: actions/cache@v2
         with:
-          path: ~/.m2/repository
-          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-          restore-keys: |
-            ${{ runner.os }}-maven-  
+          path: ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-m2  
       
-      - name: Build Spring Boot project
-        run: mvn -f github-actions-java-maven/pom.xml clean verify
-        
+      - name: Build Spring Boot project with Maven
+        run: mvn -B package --file pom.xml
+         
       - name: Deploy to Heroku
         uses: akhileshns/heroku-deploy@v3.5.7 # This is the action
         with:
