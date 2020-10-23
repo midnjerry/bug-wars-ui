@@ -1,5 +1,4 @@
-server:
-  port: ${PORT:8080}
+server.port: 8080
 spring.application.name: bug-wars-ui
 
 # This is zuul configuration.
