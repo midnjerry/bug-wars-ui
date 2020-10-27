@@ -7,8 +7,6 @@ name: Deploy Zuul Gateway / UI to Heroku
 on:
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
 
 jobs:
   build:
