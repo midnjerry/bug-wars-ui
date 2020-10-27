@@ -4,11 +4,11 @@ spring.application.name: bug-wars-ui
 # Uncomment below to enable debug logging for Netflix Stack  (i.e. Zuul)
 # Will help you with debugging routes
 
-#debug: true
-#trace: true
-#logging:
-#  level:
-#    org:
-#      springframework:
-#        cloud:
-#          netflix: trace
+debug: true
+trace: true
+logging:
+  level:
+    org:
+      springframework:
+        cloud:
+          netflix: trace
