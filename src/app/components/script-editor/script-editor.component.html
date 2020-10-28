@@ -1,18 +1,37 @@
 <form [formGroup]="finalScript" (ngSubmit)="onSubmit()">
   <div class="row title-row">
-    <input id="name" type="text" formControlName="scriptName" class="editor-title inner" placeholder="Enter your AI title here">
-    <button  class="btn-primary inner" value="submit" type="submit">Save Code</button>
-    <button class="btn-primary inner">Test Code</button>
-    <p class="return-message inner">Your code is broken! Look at Line 112.</p>
+    <input
+      id="name"
+      type="text"
+      formControlName="scriptName"
+      class="editor-title inner"
+      placeholder="Enter your AI title here"
+    />
+    <div class="desktop row">
+      <div class="action-btns row">
+        <button class="btn-primary inner" value="submit" type="submit">Save Code</button>
+        <button class="btn-primary inner">Test Code</button>
+      </div>
+      <div class="error-msg">
+        <p class="return-message inner">
+          Your code is broken! Look at Line 112.
+        </p>
+      </div>
+    </div>
   </div>
 
   <div id="editor-container" class="row">
-    <div id="editor-line-numbers" class="column" [ngStyle]="{'top.px': scrollTop}">
+    <div
+      id="editor-line-numbers"
+      class="column"
+      [ngStyle]="{ 'top.px': scrollTop }"
+    >
       <div
         id="editor-line-number"
         (scroll)="handleScroll($event)"
-        *ngFor="let num of lineCount">
-          {{num}}
+        *ngFor="let num of lineCount"
+      >
+        {{ num }}
       </div>
     </div>
     <textarea
@@ -21,6 +40,18 @@
       type="text"
       placeholder="Enter your commands here"
       (keyup)="handleChange($event)"
-      (scroll)="handleScroll($event)"></textarea>
+      (scroll)="handleScroll($event)"
+    ></textarea>
+  </div>
+  <div class="mobile">
+    <div class="action-btns">
+      <button class="btn-primary inner" value="submit" type="submit">Save Code</button>
+      <button class="btn-primary inner">Test Code</button>
+    </div>
+    <div class="error-msg">
+      <p class="return-message inner">
+        Your code is broken! Look at Line 112.
+      </p>
+    </div>
   </div>
 </form>
