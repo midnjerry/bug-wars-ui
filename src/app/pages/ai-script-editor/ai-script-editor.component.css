@@ -64,23 +64,3 @@ h2{
 .btn-primary:hover {
   background-color: #666666;
 }
-
-
-@media screen and (max-width: 768px) and (min-width: 416px){
-
-}
-
-
-@media screen and (max-width: 415px) {
-  .column{
-    display: flex;
-  }
-  .row{
-    flex-direction: column;
-  }
-  .mobile{
-    /* display: flex;
-    vertical-align: bottom; */
-    bottom: 0;
-  }
-}
