@@ -6,10 +6,24 @@
     <h2>Enter the code for your AI here.</h2>
   </div>
   <div class="row title-row">
-    <input class="editor-title inner" id="title" placeholder="Enter your AI title here">
-    <button class="btn-primary inner">Save Code</button>
-    <button class="btn-primary inner">Test Code</button>
-    <p class="return-message inner">Your code is broken! Look at Line 112.</p>
+    <div class="script-name">
+      <input
+        class="editor-title inner"
+        id="title"
+        placeholder="Enter your AI title here"
+      />
+    </div>
+    <div class="mobile">
+      <div class="action-btns">
+        <button class="btn-primary inner">Save Code</button>
+        <button class="btn-primary inner">Test Code</button>
+      </div>
+      <div class="error-msg">
+        <p class="return-message inner">
+          Your code is broken! Look at Line 112.
+        </p>
+      </div>
+    </div>
   </div>
   <app-script-editor [(script)]="scriptText"></app-script-editor>
 </div>
