@@ -28,12 +28,12 @@ jobs:
         with:
           node-version: '12.x'
         
-      - name: Build and Test Angular Project
+      - name: Test Angular Project
         run: |
           npm install
-          npm build --prod
+          npm test
          
-      - name: Login to Heroku
+      - name: Deploy to Heroku
         uses: akhileshns/heroku-deploy@v3.6.8 # This is the action
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
