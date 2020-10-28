@@ -31,7 +31,7 @@ jobs:
       - name: Test Angular Project
         run: |
           npm install
-          npm test
+          npm run test-headless
          
       - name: Deploy to Heroku
         uses: akhileshns/heroku-deploy@v3.6.8 # This is the action

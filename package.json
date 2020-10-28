@@ -8,6 +8,7 @@
     "build": "ng build",
     "heroku-postbuild": "ng build --prod",
     "test": "ng test",
+    "test-headless": "ng test --watch=false --code-coverage --browsers=ChromeHeadless",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "postinstall": "ng build --aot --prod --output-path dist"

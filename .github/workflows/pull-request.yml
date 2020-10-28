@@ -31,4 +31,4 @@ jobs:
       - name: Test Angular Project
         run: |
           npm install
-          npm test
+          npm run test
