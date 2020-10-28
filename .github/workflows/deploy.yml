@@ -28,10 +28,11 @@ jobs:
         with:
           node-version: '12.x'
         
-      - name: Test Angular Project
-        run: |
-          npm install
-          npm run test-headless
+      - name: Build Angular Project
+        run: npm install
+
+      - name: Run Tests
+        run: npm run test-headless
          
       - name: Deploy to Heroku
         uses: akhileshns/heroku-deploy@v3.6.8 # This is the action
