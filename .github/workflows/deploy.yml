@@ -41,3 +41,4 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "bug-wars"
           heroku_email: "jerry.codecamp@gmail.com"
+          env_file: "src/environments/environment.prod.ts"  
