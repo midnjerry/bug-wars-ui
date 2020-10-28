@@ -28,7 +28,8 @@ jobs:
         with:
           node-version: '12.x'
         
-      - name: Test Angular Project
-        run: |
-          npm install
-          npm run test
+      - name: Build Angular Project
+        run: npm install
+
+      - name: Run Tests
+        run: npm run test-headless
