@@ -1,4 +1,4 @@
-const apihost = 'https://codecamp-bug-wars.herokuapp.com';
+const apihost = 'http://bug-wars-api-gateway.herokuapp.com';
 
 export const environment = {
   
