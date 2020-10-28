@@ -1,4 +1,7 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
+import { APIClientService } from '../../services/apiclient.service'
+import { AIScript } from '../../models/aiscript';
+import { FormBuilder } from '@angular/forms';
 
 
 @Component({
@@ -6,15 +9,31 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   templateUrl: './script-editor.component.html',
   styleUrls: ['./script-editor.component.css']
 })
-export class ScriptEditorComponent {
+export class ScriptEditorComponent implements OnInit{
+  finalScript;
+  data;
+  ngOnInit(): void {
+  }
   @Input() script: string;
+  @Input() title: string;
   @Output() scriptEmitter = new EventEmitter<string>();
-
-  lineCount: Array<number>;
+  lineCount: Array<number>;s
   scrollTop = 0;
 
-  constructor() {
+  constructor(private service: APIClientService, private formBuilder: FormBuilder) {
+    this.finalScript = this.formBuilder.group({
+      scriptName: "",
+      scriptText: ""
+    });
     this.lineCount = [1];
+  }
+
+  onSubmit(){
+    let returnScript = new AIScript(null, this.finalScript.controls["scriptName"].value, this.finalScript.controls["scriptText"].value);
+    this.service.saveAI(returnScript).subscribe((results) => {
+      console.log('Data is received - Result - ', results);
+      this.data = results.error;
+    })
   }
 
   handleScroll(event: Event) {
@@ -38,3 +57,4 @@ export class ScriptEditorComponent {
     }
   }
 }
+
