@@ -1,17 +1,26 @@
-<div id="editor-container" class="row">
+<form [formGroup]="finalScript" (ngSubmit)="onSubmit()">
+  <div class="row title-row">
+    <input id="name" type="text" formControlName="scriptName" class="editor-title inner" placeholder="Enter your AI title here">
+    <button  class="btn-primary inner" value="submit" type="submit">Save Code</button>
+    <button class="btn-primary inner">Test Code</button>
+    <p class="return-message inner">Your code is broken! Look at Line 112.</p>
+  </div>
+
+  <div id="editor-container" class="row">
     <div id="editor-line-numbers" class="column" [ngStyle]="{'top.px': scrollTop}">
       <div
         id="editor-line-number"
         (scroll)="handleScroll($event)"
-
         *ngFor="let num of lineCount">
           {{num}}
       </div>
     </div>
     <textarea
-      id="editor-textarea"
+      formControlName="scriptText"
+      id="script"
+      type="text"
       placeholder="Enter your commands here"
-      [value]="script"
       (keyup)="handleChange($event)"
       (scroll)="handleScroll($event)"></textarea>
   </div>
+</form>
