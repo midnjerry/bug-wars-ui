@@ -1,0 +1,20 @@
+
+    .container1{
+    padding-left: 50px;
+    margin-bottom: 50;
+
+  }
+  .container2{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    white-space: normal;
+    padding-left: 50px;
+    margin-bottom: 50;
+    
+  }
+
+  
+  
+
+  
