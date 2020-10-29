@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 
-const apihost = 'http://localhost:8081';
+// const apihost = 'http://localhost:8081';
+
+// export const environment = {
+  
+//   getAllAiScriptUrl: apihost+'/api/ai',
+
+//   production: false
+// };
+
+const apihost = 'http://bug-wars-api-gateway.herokuapp.com';
 
 export const environment = {
   
