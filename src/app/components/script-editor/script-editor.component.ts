@@ -10,51 +10,39 @@ import { FormBuilder } from '@angular/forms';
   styleUrls: ['./script-editor.component.css']
 })
 export class ScriptEditorComponent implements OnInit{
-  finalScript;
+  formScript;
   data;
-  ngOnInit(): void {
-  }
-  @Input() script: string;
+  errorMessage : string;
+  ngOnInit(): void {}
+  @Input() script: string = "# Enter your commands here";
   @Input() title: string;
   @Output() scriptEmitter = new EventEmitter<string>();
-  lineCount: Array<number>;s
-  scrollTop = 0;
+  options = {
+    lineNumbers: true,
+    mode: 'markdown',
+  }
 
   constructor(private service: APIClientService, private formBuilder: FormBuilder) {
-    this.finalScript = this.formBuilder.group({
-      scriptName: "",
-      scriptText: ""
+    this.formScript = this.formBuilder.group({
+      scriptName: this.title,
+      scriptText: this.script
     });
-    this.lineCount = [1];
   }
 
   onSubmit(){
-    let returnScript = new AIScript(null, this.finalScript.controls["scriptName"].value, this.finalScript.controls["scriptText"].value);
-    this.service.saveAI(returnScript).subscribe((results) => {
+    let returnScript = new AIScript(
+      null, 
+      this.formScript.controls["scriptName"].value, 
+      this.formScript.controls["scriptText"].value);
+    
+      this.service.saveAI(returnScript).subscribe((results) => {
       console.log('Data is received - Result - ', results);
-      this.data = results.error;
+      this.errorMessage = results.error;
+      this.data = results.ai;
+    }, (error: any) => {
+      console.log('Error: ' + error);
+      this.errorMessage = "Failed to connect.";
     })
-  }
-
-  handleScroll(event: Event) {
-    const scrollValue = (event.target as Element).scrollTop;
-    this.scrollTop = -scrollValue;
-  }
-
-  handleChange({target}) {
-    const {value} = target;
-    this.scriptEmitter.emit(value);
-    this.updateLineCount(value);
-  }
-
-  updateLineCount(value: string) {
-    this.lineCount = [1];
-    for (let i = 0, num = 2; i < value.length; i++) {
-      if (value[i] === '\n') {
-        this.lineCount.push(num);
-        num++;
-      }
-    }
   }
 }
 
