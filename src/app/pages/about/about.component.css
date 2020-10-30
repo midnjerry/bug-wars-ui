@@ -13,11 +13,22 @@
     margin-bottom: 50;
     
   }
+  .pictureContainer{
+   display: flex;
+   flex-direction: row;
+   padding-left: 50px;
+   padding-top: 100px;
+   justify-content: space-around;
+   align-items: center;
+   align-content: center;
+  }
+
 
   img {
       border-radius: 50%;
-      width: 300px;
+      width: 150px;
   }
+
 
   
   
