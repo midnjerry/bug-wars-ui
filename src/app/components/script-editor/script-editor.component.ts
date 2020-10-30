@@ -37,11 +37,12 @@ export class ScriptEditorComponent implements OnInit{
     
       this.service.saveAI(returnScript).subscribe((results) => {
       console.log('Data is received - Result - ', results);
-      this.errorMessage = results.error;
       this.data = results.ai;
     }, (error: any) => {
-      console.log('Error: ' + error);
       this.errorMessage = "Failed to connect.";
+      if (error?.error){
+        this.errorMessage = error.error;
+      }
     })
   }
 }
