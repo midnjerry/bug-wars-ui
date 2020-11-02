@@ -9,31 +9,43 @@
     />
     <div class="desktop row">
       <div class="action-btns row">
-        <button class="btn-primary inner" value="submit" type="submit">Save Code</button>
+        <button class="btn-primary inner" value="submit" type="submit">
+          Save Code
+        </button>
         <button class="btn-primary inner">Test Code</button>
       </div>
       <div *ngIf="errorMessage" class="error-msg">
         <p class="return-message inner">
-          {{errorMessage}}
+          {{ errorMessage }}
         </p>
       </div>
     </div>
   </div>
 
   <div id="editor-container" class="row">
-          <ngx-codemirror ngDefaultControl class="editor"
-            formControlName="scriptText" 
-            [options]="options">
-          </ngx-codemirror>
+    <ngx-codemirror
+      ngDefaultControl
+      class="editor"
+      formControlName="scriptText"
+      [options]="options"
+    >
+    </ngx-codemirror>
   </div>
   <div class="mobile">
     <div class="action-btns">
-      <button class="btn-primary inner" value="submit" type="submit">Save Code</button>
+      <button
+        class="btn-primary inner"
+        value="submit"
+        type="submit"
+        (click)="onSubmit()"
+      >
+        Save Code
+      </button>
       <button class="btn-primary inner">Test Code</button>
     </div>
     <div *ngIf="errorMessage" class="error-msg">
       <p class="return-message inner">
-        {{errorMessage}}
+        {{ errorMessage }}
       </p>
     </div>
   </div>
