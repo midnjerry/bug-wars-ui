@@ -1,17 +1,2 @@
-nav{
-  background-color: dodgerblue;
-  width: 100%;
-  z-index: 1;
-}
-a{
-  color: white;
-  text-decoration: none;
-  font-family: sans-serif;
-  font-size: 2em;
-}
-.row{
-  display: flex;
-  justify-content: space-between;
-  padding: 5px;
-}
+
 
