@@ -1,12 +1,79 @@
-<div class="nav-space"></div>
+<div class="container">
+    <div class="row d-flex justify-content-center justify-content-md-start">
+        <h1 class="h1-responsive font-weight-bolder mt-5 text-xs-center text-md-left">Game Lobby</h1>
+        <div class="w-100"></div>
+        <h2 class="h2-responsive font-weight-light m-3">Select your game map and AI options</h2>
+    </div>
+    <div class="row">
+      <map-carousel [slides]="slides"></map-carousel>
+      <div class="col-12 col-md-6 dropdown">
+        <div class="row m-2">
+          <h5 class="col-4 col-md-12 font-weight-normal d-flex align-self-center justify-content-end">
+            Bug 1:
+          </h5>
+          <button class="col-8 col-md-12 btn btn-secondary dropdown-toggle btn-lg" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown button
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </div>
+
+        <div class="row m-2">
+          <h5 class="col-4 col-md-12 font-weight-normal d-flex align-self-center justify-content-end">Bug 1: </h5>
+          <button class="col-8 col-md-12 btn btn-secondary dropdown-toggle btn-lg" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown button
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </div>
+
+        <div class="row m-2">
+          <h5 class="col-4 col-md-12 font-weight-normal d-flex align-self-center justify-content-end">Bug 1: </h5>
+          <button class="col-8 col-md-12 btn btn-secondary dropdown-toggle btn-lg" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown button
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </div>
+
+        <div class="row m-2">
+          <h5 class="col-4 col-md-12 font-weight-normal d-flex align-self-center justify-content-end">Bug 1: </h5>
+          <button class="col-8 col-md-12 btn btn-secondary dropdown-toggle btn-lg" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown button
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+<!-- <div class="container body-container">
 <div class="lobby grid-container">
-  <div class="lobby-title">
+ <div class="lobby-title">
     <h1>Game Lobby</h1>
     <h4>Select your AI options and map</h4>
   </div>
+  <div class="row justify-content-start m-3">
+      <h1 class="h1-responsive font-weight-bolder">Game Lobby</h1>
+      <div class="w-100"></div>
+      <h2 class="h2-responsive font-weight-light">Select your game map and AI options</h2>
+  </div>
   <div class="row main-row">
     <div class="column">
-      <div class="container game-map">
+      <div class="wrapper game-map">
         <map-carousel [slides]="slides"></map-carousel>
       </div>
     </div>
@@ -15,3 +82,4 @@
     <app-ai-dropdowns></app-ai-dropdowns>
   </div>
 </div>
+</div> -->
