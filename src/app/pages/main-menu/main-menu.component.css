@@ -1,4 +1,4 @@
-.title{
+/* .title{
   font-family: sans-serif;
   display: flex;
   height: 85vh;
@@ -40,4 +40,18 @@ h2{
   .btn-row{
     display: flex;
   }
+} */
+
+#main-menu {
+  min-height: 85vh;
+  justify-content: center;
 }
+
+#main-title {
+  justify-self: center;
+}
+
+.text-responsive {
+  font-size: calc(100% + 5vw + 5vh);
+}
+

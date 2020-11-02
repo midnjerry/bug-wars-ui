@@ -1,10 +1,32 @@
-<div class="row title">
-  <div class="column">
-    <h1>Bug Wars</h1>
-    <h2>It's a bug eat bug world.</h2>
-    <div class="btn-row">
-      <a class="btn-primary btn-menu" routerLink="/lobby" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active">Create Game</a>
-      <a class="btn-primary btn-menu" routerLink="/ai-editor" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active">AI Script Editor</a>
+<div class="container d-flex justify-self-center">
+  <div id="main-menu" class="row align-content-center">
+    <div class="row justify-content-center">
+        <h1 class="text-responsive font-weight-bolder">Bug Wars</h1>
+        <div class="w-100"></div>
+        <h2 class="font-weight-light">It's a bug eat bug world.</h2>
+    </div>
+    <div class="w-100"></div>
+    <div class="row m-3 justify-content-center w-100">
+      <div class="col col-sm-12 col-lg-3 m-2">
+      <a role="button" class="btn btn-secondary btn-lg btn-block p-3" routerLink="/lobby" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active">Create Game</a>
+    </div>
+    <div class="col-sm-12 col-lg-3 m-2">
+      <a role="button" class="btn btn-secondary btn-lg btn-block p-3" routerLink="/ai-editor" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active">AI Script Editor</a>
+    </div>
+    <div class="col-sm-12 col-lg-3 m-2">
+      <a role="button" class="btn btn-secondary btn-lg btn-block p-3" routerLink="/about" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active">About</a>
+    </div>
     </div>
   </div>
 </div>
+
+<!-- <div class="container">
+  <div class="row">
+      <h1>Bug Wars</h1>
+      <h2>It's a bug eat bug world.</h2>
+      <div class="btn-row">
+        <a class="btn-primary btn-menu" routerLink="/lobby" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active">Create Game</a>
+        <a class="btn-primary btn-menu" routerLink="/ai-editor" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active">AI Script Editor</a>
+      </div>
+  </div>
+</div> -->
