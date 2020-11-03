@@ -57,7 +57,7 @@ describe('APIClientService', () => {
 
       const response: AIScriptResponse = new AIScriptResponse(save, null);
 
-      apiClient.saveAI(input).subscribe((data) => {
+      apiClient.createAIScript(input).subscribe((data) => {
         expect(data).toEqual(response);
       });
 
@@ -66,6 +66,26 @@ describe('APIClientService', () => {
       );
 
       expect(req.request.method).toEqual('POST');
+      req.flush(response);
+    });
+  });
+
+  describe('updateAIScript()', () => {
+    it('should call endpoint from environment file and return output', () => {
+      const input: AIScript = new AIScript(1, 'Meg', 'jump jump');
+    
+
+      const response: AIScriptResponse = new AIScriptResponse(input, null);
+
+      apiClient.updateAIScript(input).subscribe((data) => {
+        expect(data).toEqual(response);
+      });
+
+      const req = httpTestingController.expectOne(
+        environment.getAllAiScriptUrl + '/1'
+      );
+
+      expect(req.request.method).toEqual('PUT');
       req.flush(response);
     });
   });
