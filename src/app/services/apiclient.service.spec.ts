@@ -57,7 +57,7 @@ describe('APIClientService', () => {
 
       const response: AIScriptResponse = new AIScriptResponse(save, null);
 
-      apiClient.saveAI(input).subscribe((data) => {
+      apiClient.createAIScript(input).subscribe((data) => {
         expect(data).toEqual(response);
       });
 
@@ -77,7 +77,7 @@ describe('APIClientService', () => {
 
       const response: AIScriptResponse = new AIScriptResponse(input, null);
 
-      apiClient.updateAI(input).subscribe((data) => {
+      apiClient.updateAIScript(input).subscribe((data) => {
         expect(data).toEqual(response);
       });
 

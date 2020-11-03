@@ -39,7 +39,7 @@ export class ScriptEditorComponent implements OnInit {
       this.formScript.controls['scriptText'].value
     );
 
-    this.service.saveAI(returnScript).subscribe(
+    this.service.createAIScript(returnScript).subscribe(
       (results) => {
         console.log('Data is received - Result - ', results);
         this.data = results.ai;
