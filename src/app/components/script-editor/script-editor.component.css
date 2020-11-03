@@ -1,72 +1,24 @@
+form{
+  margin: 1rem;
+  margin-top: .25rem;
+}
 #editor-container {
   border: solid 1px #d3d3d3;
   border-radius: 3px;
   margin: 0.5rem;
   overflow-y: hidden;
 }
-
-.title-row {
+#name{
+  margin-left: .5rem;
+  width: 40%;
+}
+.action-btns{
   display: flex;
-  vertical-align: bottom;
-  width: 100vw;
-}
-
-.title-row > .inner {
-  margin: 10px;
-}
-
-.return-message {
-  font-family: 'Courier New', Courier, monospace;
-  color: red;
-  align-self: flex-end;
-}
-
-.btn-grp {
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-.editor-title {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size:18px;
-  width: 35%;
-  border-radius: 4px;
-  border:1px solid darkgray;
+  justify-content: space-around;
 }
 
 .editor {
   width: 100%;
-}
-
-h1{
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 50px;
-}
-
-h2{
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 100;
-}
-
-.header{
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-.h1-row{
-  display:flex;
-  justify-content: space-between;
-}
-
-.icon-link{
-  padding: 20px;
-  color: inherit;
-}
-
-.btn-primary:hover {
-  background-color: #666666;
 }
 
 .desktop{
@@ -77,43 +29,32 @@ h2{
 .mobile{
   display: none;
 }
-.inner{
-  padding-right: 6%;
-  padding-left: 6%;
-  margin-left: 5%;
-  margin-right: 5%;
-}
-.btn-primary{
-  width: 10em;
-  height: 3.5em;
+
+.btn{
+  margin-left: 1em;
+  margin-right: 1em;
 }
 
-@media screen and (max-width: 768px) and (min-width: 416px){
-  .desktop{
+@media screen and (max-width: 992px) and (min-width: 416px){
+  #name{
+    width: 100%;
+  }
+   .desktop{
     display: none;
   }
 
   .mobile{
     display: inline;
-  }
-
-  .editor-title{
-    margin-left: 2%;
-    width: 85%;
-  }
-
-  .return-message{
-    margin-top: 1em;
-    padding-left: 0;
   }
 }
 
 @media screen and (max-width: 464px){
-  #editor-container{
-    height: 15em;
-    margin: 1rem;
-  }
 
+  #name{
+    width: 100%;
+    margin-right: 0;
+    padding-right: 0;
+  }
   .desktop{
     display: none;
   }
@@ -121,27 +62,5 @@ h2{
   .mobile{
     display: inline;
   }
-
-  .inner{
-    width: 5em;
-    padding-right: 20%;
-    padding-left: 10%;
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-  .return-message{
-    width: 95%;
-    padding-left: 0;
-    margin-right: 5%;
-    margin-top: 1em;
-  }
-  .action-btns{
-    display: flex;
-    justify-content: space-around;
-  }
-
-  .editor-title{
-    margin-left: 2%;
-    width: 80%;
-  }
 }
+
