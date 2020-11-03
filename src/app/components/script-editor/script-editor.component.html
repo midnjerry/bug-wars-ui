@@ -1,5 +1,5 @@
 <form [formGroup]="formScript" (ngSubmit)="onSubmit()">
-  <div class="row title-row">
+  <div class="row col-md-12 col-lg ">
     <input
       id="name"
       type="text"
@@ -7,12 +7,12 @@
       class="editor-title inner"
       placeholder="Enter your AI title here"
     />
-    <div class="desktop row">
-      <div class="action-btns row">
-        <button class="btn-primary inner" value="submit" type="submit">
+    <div class="desktop row col-lg-4">
+      <div class="action-btns">
+        <button class="btn btn-secondary inner" value="submit" type="submit">
           Save Code
         </button>
-        <button class="btn-primary inner">Test Code</button>
+        <button class="btn btn-secondary inner">Test Code</button>
       </div>
       <div *ngIf="errorMessage" class="error-msg">
         <p class="return-message inner">
@@ -34,14 +34,14 @@
   <div class="mobile">
     <div class="action-btns">
       <button
-        class="btn-primary inner"
+        class="btn btn-secondary inner"
         value="submit"
         type="submit"
         (click)="onSubmit()"
       >
         Save Code
       </button>
-      <button class="btn-primary inner">Test Code</button>
+      <button class="btn btn-secondary inner">Test Code</button>
     </div>
     <div *ngIf="errorMessage" class="error-msg">
       <p class="return-message inner">
