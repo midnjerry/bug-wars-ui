@@ -3,6 +3,7 @@ import { APIClientService } from '../../services/apiclient.service';
 import { AIScript } from '../../models/aiscript';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { HttpErrorResponse } from '@angular/common/http';
+import 'codemirror/addon/display/placeholder.js';
 
 @Component({
   selector: 'app-script-editor',
@@ -14,14 +15,16 @@ export class ScriptEditorComponent implements OnInit {
   data;
   errorMessage: string;
   ngOnInit(): void {}
-  @Input() script: string = '# Enter your commands here';
+  @Input() script: string;
   @Input() title: string;
   @Input() id: string = null;
 
   @Output() scriptEmitter = new EventEmitter<string>();
+
   options = {
     lineNumbers: true,
     mode: 'markdown',
+    placeholder: 'these options'
   };
 
   constructor(
