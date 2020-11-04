@@ -73,7 +73,7 @@ describe('APIClientService', () => {
   describe('updateAIScript()', () => {
     it('should call endpoint from environment file and return output', () => {
       const input: AIScript = new AIScript(1, 'Meg', 'jump jump');
-    
+
 
       const response: AIScriptResponse = new AIScriptResponse(input, null);
 

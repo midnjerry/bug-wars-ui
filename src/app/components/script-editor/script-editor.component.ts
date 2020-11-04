@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
 import { APIClientService } from '../../services/apiclient.service';
 import { AIScript } from '../../models/aiscript';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
@@ -10,12 +10,14 @@ import { HttpErrorResponse } from '@angular/common/http';
   styleUrls: ['./script-editor.component.css'],
 })
 export class ScriptEditorComponent implements OnInit {
-  formScript;
+  formScript: FormGroup;
   data;
   errorMessage: string;
   ngOnInit(): void {}
   @Input() script: string = '# Enter your commands here';
   @Input() title: string;
+  @Input() id: string = null;
+
   @Output() scriptEmitter = new EventEmitter<string>();
   options = {
     lineNumbers: true,
@@ -29,27 +31,46 @@ export class ScriptEditorComponent implements OnInit {
     this.formScript = this.formBuilder.group({
       scriptName: this.title,
       scriptText: this.script,
+      scriptId: this.id
     });
   }
 
   onSubmit() {
+    let scriptId = this.formScript.controls['scriptId'].value;
+
     let returnScript = new AIScript(
-      null,
+      scriptId,
       this.formScript.controls['scriptName'].value,
       this.formScript.controls['scriptText'].value
     );
 
-    this.service.createAIScript(returnScript).subscribe(
-      (results) => {
-        console.log('Data is received - Result - ', results);
-        this.data = results.ai;
-      },
-      (error: HttpErrorResponse) => {
-        this.errorMessage = 'Failed to connect.';
-        if (error?.message) {
-          this.errorMessage = error.statusText;
+    if(scriptId == null){
+      this.service.createAIScript(returnScript).subscribe(
+        (results) => {
+          console.log('Data is received - Result - ', results);
+          this.data = results.ai;
+        },
+        (error: HttpErrorResponse) => {
+          this.errorMessage = 'Failed to connect.';
+          if (error.message) {
+            this.errorMessage = error.statusText;
+          }
+        }
+      );
+    }
+    else {
+      this.service.updateAIScript(returnScript).subscribe(
+        (results) => {
+          console.log('Data is received - Result - ', results);
+          this.data = results.ai;
+        },
+        (error: HttpErrorResponse) => {
+          this.errorMessage = 'Failed to connect.';
+          if (error.message) {
+            this.errorMessage = error.statusText;
         }
       }
     );
+    }
   }
 }
