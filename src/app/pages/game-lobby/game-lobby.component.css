@@ -1,11 +1,3 @@
-.h1-responsive {
-  font-size: calc(100% + 1.5vw + 1.5vh);
-}
-
-.h2-responsive {
-  font-size: calc(100% + .2vw + .2vh);
-}
-
 .lobby-title {
   padding: 5%;
 }

@@ -1,6 +1,19 @@
-<h2>My Scripts</h2>
-<ul class="scripts">
-  <li *ngFor="let script of scripts">
-    <span class="badge">{{script.id}}</span> {{script.name}}
+<div class="card scroll">
+<ul class="list-group list-group-flush">
+  <li class="list-group-item d-flex" *ngFor="let script of scripts">
+    <div class="col d-inline-block text-truncate mr-2">
+        <div class="row font-weight-bold">
+          {{script.name}}
+        </div>
+        <div class="row d-none d-sm-block">
+          "{{script.script}}"
+        </div>
+    </div>
+    <span class="d-flex justify-content-end align-items-center">
+    <div class="col p-0">
+    <button class="btn btn-secondary">Edit AI</button>
+  </div>
+</span>
   </li>
 </ul>
+</div>
