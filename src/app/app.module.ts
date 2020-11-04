@@ -19,6 +19,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AboutComponent } from './pages/about/about.component';
 import { CodemirrorModule } from '@ctrl/ngx-codemirror';
 import { AiListComponent } from './pages/ai-list/ai-list.component';
+import { AllScriptsListComponent } from './components/all-scripts-list/all-scripts-list.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { AiListComponent } from './pages/ai-list/ai-list.component';
     MapCarouselComponent,
     NavbarComponent,
     AboutComponent,
-    AiListComponent
+    AiListComponent,
+    AllScriptsListComponent
   ],
   imports: [
     BrowserModule,
