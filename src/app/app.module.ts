@@ -18,6 +18,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AboutComponent } from './pages/about/about.component';
 import { CodemirrorModule } from '@ctrl/ngx-codemirror';
+import { AiListComponent } from './pages/ai-list/ai-list.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { CodemirrorModule } from '@ctrl/ngx-codemirror';
     AiDropdownsComponent,
     MapCarouselComponent,
     NavbarComponent,
-    AboutComponent
+    AboutComponent,
+    AiListComponent
   ],
   imports: [
     BrowserModule,
