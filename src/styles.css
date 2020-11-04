@@ -46,3 +46,11 @@ h1, h2, h3, h4, h5, h6, p{
 .CodeMirror-placeholder.CodeMirror-line-like{
   color: darkgrey !important;
 }
+
+.h1-responsive {
+  font-size: calc(100% + 1.5vw + 1.5vh);
+}
+
+.h2-responsive {
+  font-size: calc(100% + .2vw + .2vh);
+}
