@@ -12,8 +12,7 @@ import { AiDropdownsComponent } from './components/ai-dropdowns/ai-dropdowns.com
 import { MapCarouselComponent } from './components/map-carousel/map-carousel.component';
 
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AboutComponent } from './pages/about/about.component';
@@ -33,20 +32,19 @@ import { AllScriptsListComponent } from './components/all-scripts-list/all-scrip
     NavbarComponent,
     AboutComponent,
     AiListComponent,
-    AllScriptsListComponent
+    AllScriptsListComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     NoopAnimationsModule,
-    FontAwesomeModule,
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
-    CodemirrorModule
+    CodemirrorModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
