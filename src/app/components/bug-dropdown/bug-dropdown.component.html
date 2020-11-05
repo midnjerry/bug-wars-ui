@@ -1,22 +1,12 @@
 <div class="row m-2">
-  <h5
-    class="col-4 col-md-12 font-weight-normal d-flex align-self-center justify-content-end"
-  >
-    Bug 1:
-  </h5>
-  <button
-    class="col-8 col-md-12 btn btn-secondary dropdown-toggle btn-lg"
-    type="button"
-    id="dropdownMenuButton"
-    data-toggle="dropdown"
-    aria-haspopup="true"
-    aria-expanded="false"
-  >
-    Select Script
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-  </div>
+  <i-bs
+    [class]="color"
+    [style]="{ paddingRight: '1em' }"
+    name="bug-fill"
+    width="32"
+    height="32"
+  ></i-bs>
+  <select>
+    <option *ngFor="let option of options">{{ option }}</option>
+  </select>
 </div>
