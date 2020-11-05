@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class BugDropdownComponent implements OnInit {
   @Input() color: string;
-  @Input() options: [string];
+  @Input() options: string[];
 
   constructor() {}
 
