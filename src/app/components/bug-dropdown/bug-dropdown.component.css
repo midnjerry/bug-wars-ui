@@ -1,0 +1,13 @@
+.bug {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+select {
+  font-family: 1.5rem;
+  height: 1.5rem;
+  width: 150px;
+}
