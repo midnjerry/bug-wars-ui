@@ -1,5 +1,39 @@
-.lobby-title {
-  padding: 5%;
+.main-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.map-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 5rem auto;
+}
+
+.bug-list {
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 765px) {
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5rem auto 5rem;
+  }
+  .map-content {
+    margin-bottom: 2rem;
+  }
+  .bug-list {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 /* .main-row {
