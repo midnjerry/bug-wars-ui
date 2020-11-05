@@ -4,6 +4,7 @@ import { AIScript } from '../../models/aiscript';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { HttpErrorResponse } from '@angular/common/http';
 import 'codemirror/addon/display/placeholder.js';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-script-editor',
@@ -14,12 +15,10 @@ export class ScriptEditorComponent implements OnInit {
   formScript: FormGroup;
   data;
   errorMessage: string;
-  ngOnInit(): void {}
-  @Input() script: string;
-  @Input() title: string;
-  @Input() id: string = null;
-
-  @Output() scriptEmitter = new EventEmitter<string>();
+  ngOnInit(): void {
+    this.loadAIScript();
+  }
+  aiScript: AIScript = new AIScript(null, '', '');
 
   options = {
     lineNumbers: true,
@@ -29,13 +28,28 @@ export class ScriptEditorComponent implements OnInit {
 
   constructor(
     private service: APIClientService,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private route: ActivatedRoute,
   ) {
     this.formScript = this.formBuilder.group({
-      scriptName: this.title,
-      scriptText: this.script,
-      scriptId: this.id
+      scriptName: this.aiScript.name,
+      scriptText: this.aiScript.script,
+      scriptId: this.aiScript.id
     });
+  }
+
+  loadAIScript(): void {
+    const id = this.route.snapshot.paramMap.get('id');
+    console.log(id);
+    if(id !== null) {
+      this.service.getAIScript(+id).subscribe(script => this.aiScript = script);
+    }
+    //this.service.getAIScript(id).subscribe(script => this.aiScript = script);
+    console.log(id);
+    console.log(this.aiScript);
+    this.formScript.controls['scriptName'].setValue(this.aiScript.name);
+    this.formScript.controls['scriptText'].setValue(this.aiScript.script);
+    this.formScript.controls['scriptId'].setValue(this.aiScript.id);
   }
 
   onSubmit() {

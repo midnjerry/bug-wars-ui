@@ -3,11 +3,15 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { AIScript } from '../models/aiscript';
 import { AIScriptResponse} from '../models/aiscript.response';
+import { of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class APIClientService {
+  getAIScript(id: number) {
+    return of(new AIScript(1, 'test', 'test'));
+  }
   getAllAIScripts(){
     const url = environment.getAllAiScriptUrl;
     // // response = this.http.get(url).subscribe()

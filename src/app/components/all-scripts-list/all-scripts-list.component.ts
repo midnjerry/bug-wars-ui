@@ -17,4 +17,8 @@ export class AllScriptsListComponent implements OnInit {
     this.service.getAllAIScripts().subscribe(res=>this.scripts=res);
   }
 
+  autoFill(): void {
+    
+  }
+
 }

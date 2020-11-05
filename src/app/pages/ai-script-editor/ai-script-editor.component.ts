@@ -8,5 +8,6 @@ import { Component, OnInit } from '@angular/core';
 export class AiScriptEditorComponent implements OnInit {
   constructor() { }
   ngOnInit(): void {
+
   }
 }
