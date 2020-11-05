@@ -1,23 +1,17 @@
-<mxfile host="app.diagrams.net" modified="2020-11-05T06:57:39.901Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36" etag="LWWL5SlUZVZhc11jNp1H" version="13.9.1" type="github">
+<mxfile host="app.diagrams.net" modified="2020-11-05T07:14:06.531Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36" etag="qH3XIKNG61YL9y_LOba9" version="13.9.1" type="github">
   <diagram id="31b32b95-0358-9bc7-6ba0-a27c054ed1a7" name="Page-1">
     <mxGraphModel dx="1248" dy="677" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="tF901fyGYfo_4YfBg2au-117" value="&lt;font color=&quot;#000000&quot; style=&quot;font-size: 12px&quot;&gt;&lt;b&gt;Spring Boot PostgreSQL&lt;br&gt;A.I. Script Compiler&lt;/b&gt;&lt;br&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontColor=#ffffff;fillColor=#c9c3e6;strokeWidth=4;strokeColor=#6762a6;verticalAlign=top;verticalLabelPosition=bottom;rounded=1;sketch=0;shadow=0;glass=0;labelPosition=center;align=center;" parent="1" vertex="1">
-          <mxGeometry x="500.75" y="1242.5" width="130" height="135" as="geometry" />
-        </mxCell>
         <mxCell id="2" value="" style="swimlane;shadow=0;strokeColor=#4277BB;fillColor=#ffffff;fontColor=#4277BB;align=right;startSize=0;collapsible=0;strokeWidth=3;" parent="1" vertex="1">
-          <mxGeometry x="247" y="140" width="1160" height="890" as="geometry" />
+          <mxGeometry x="247" y="140" width="983" height="890" as="geometry" />
         </mxCell>
         <mxCell id="3" value="PUBLIC NETWORK" style="text;html=1;align=left;verticalAlign=top;fontColor=#4277BB;shadow=0;dashed=0;strokeColor=none;fillColor=none;labelBackgroundColor=none;fontStyle=1;fontSize=16;spacingLeft=5;" parent="2" vertex="1">
           <mxGeometry width="170" height="30" as="geometry" />
         </mxCell>
         <mxCell id="4" value="" style="line;strokeWidth=3;direction=south;html=1;shadow=0;labelBackgroundColor=none;fillColor=none;gradientColor=none;fontSize=12;fontColor=#4277BB;align=right;strokeColor=#4277BB;" parent="2" vertex="1">
-          <mxGeometry x="320" width="10" height="250" as="geometry" />
-        </mxCell>
-        <mxCell id="5" value="HEROKU CLOUD PLATFORM" style="text;html=1;align=left;verticalAlign=top;fontColor=#4277BB;shadow=0;dashed=0;strokeColor=none;fillColor=none;labelBackgroundColor=none;fontStyle=1;fontSize=16;spacingLeft=5;" parent="2" vertex="1">
-          <mxGeometry x="368" width="180" height="35" as="geometry" />
+          <mxGeometry x="320" width="10" height="340" as="geometry" />
         </mxCell>
         <mxCell id="6" value="Application component" style="rounded=0;html=1;shadow=0;labelBackgroundColor=none;strokeWidth=2;fontSize=12;align=left;labelPosition=right;verticalLabelPosition=middle;verticalAlign=middle;spacingLeft=5;" parent="2" vertex="1">
           <mxGeometry x="10" y="730" width="20" height="10" as="geometry" />
@@ -47,10 +41,7 @@
           <mxGeometry x="10" y="870" width="20" height="10" as="geometry" />
         </mxCell>
         <mxCell id="16" value="" style="line;strokeWidth=3;direction=south;html=1;shadow=0;labelBackgroundColor=none;fillColor=none;gradientColor=none;fontSize=12;fontColor=#4277BB;align=right;strokeColor=#4277BB;" parent="2" vertex="1">
-          <mxGeometry x="320" y="370" width="10" height="520" as="geometry" />
-        </mxCell>
-        <mxCell id="17" value="" style="swimlane;shadow=0;strokeColor=#4277BB;fillColor=#ffffff;fontColor=#4277BB;align=right;startSize=0;collapsible=0;strokeWidth=3;" parent="2" vertex="1">
-          <mxGeometry x="394" y="780" width="516" height="90" as="geometry" />
+          <mxGeometry x="320" y="560" width="10" height="330" as="geometry" />
         </mxCell>
         <mxCell id="19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;comic=0;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.25;startArrow=classic;startFill=1;endArrow=classic;endFill=1;jettySize=auto;orthogonalLoop=1;strokeColor=#4378BB;strokeWidth=2;fontFamily=Helvetica;fontSize=19;fontColor=#CC99FF;endSize=4;startSize=4;" parent="2" source="20" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -89,23 +80,8 @@
         <mxCell id="24" value="CLOUD" style="aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;image;image=img/lib/ibm/data/cloud.svg;labelBackgroundColor=#ffffff;strokeColor=#666666;strokeWidth=3;fillColor=#C2952D;gradientColor=none;fontSize=12;fontColor=#4277BB;" parent="2" vertex="1">
           <mxGeometry x="10" y="370" width="60" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;labelBackgroundColor=#ffffff;startArrow=classic;startFill=1;startSize=4;endArrow=classic;endFill=1;endSize=4;jettySize=auto;orthogonalLoop=1;strokeColor=#4378BB;strokeWidth=2;fontSize=19;fontColor=#CC99FF;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="2" source="tF901fyGYfo_4YfBg2au-99" target="tF901fyGYfo_4YfBg2au-96" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="240" y="296" as="sourcePoint" />
-            <mxPoint x="295" y="296" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="27" style="edgeStyle=elbowEdgeStyle;rounded=0;html=1;labelBackgroundColor=#ffffff;startArrow=classic;startFill=1;startSize=4;endArrow=classic;endFill=1;endSize=4;jettySize=auto;orthogonalLoop=1;strokeColor=#4378BB;strokeWidth=2;fontSize=19;fontColor=#CC99FF;elbow=vertical;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="2" source="tF901fyGYfo_4YfBg2au-96" target="35" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="380" y="296" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="376" y="296" />
-            </Array>
-            <mxPoint x="355" y="296" as="sourcePoint" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="29" value="" style="swimlane;shadow=0;strokeColor=#4277BB;fillColor=#ffffff;fontColor=#4277BB;align=right;startSize=0;collapsible=0;strokeWidth=3;" parent="2" vertex="1">
-          <mxGeometry x="394" y="44" width="516" height="141" as="geometry" />
+          <mxGeometry x="427" y="44" width="516" height="141" as="geometry" />
         </mxCell>
         <mxCell id="30" value="COLLABORATIVE&lt;div&gt;DEVELOPMENT&lt;/div&gt;" style="aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;image;image=img/lib/ibm/devops/collaborative_development.svg;labelBackgroundColor=#ffffff;strokeColor=#666666;strokeWidth=3;fillColor=#C2952D;gradientColor=none;fontSize=12;fontColor=#4277BB;&#xa;&#xa;shape=mxgraph.weblogos.github" parent="29" vertex="1">
           <mxGeometry x="34" y="32" width="60" height="60" as="geometry" />
@@ -113,193 +89,35 @@
         <mxCell id="31" value="CONTINUOUS&lt;div&gt;DEPLOY&lt;/div&gt;" style="aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;image;image=img/lib/ibm/devops/continuous_deploy.svg;labelBackgroundColor=#ffffff;strokeColor=#666666;strokeWidth=3;fillColor=#C2952D;gradientColor=none;fontSize=12;fontColor=#4277BB;" parent="29" vertex="1">
           <mxGeometry x="162" y="32" width="60" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="32" value="CONFIGURATION&lt;div&gt;MANAGEMENT&lt;/div&gt;" style="aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;image;image=img/lib/ibm/devops/configuration_management.svg;labelBackgroundColor=#ffffff;strokeColor=#666666;strokeWidth=3;fillColor=#C2952D;gradientColor=none;fontSize=12;fontColor=#4277BB;" parent="29" vertex="1">
+        <mxCell id="32" value="DEPENDENCY&lt;br&gt;MANAGEMENT" style="aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;image;image=img/lib/ibm/devops/configuration_management.svg;labelBackgroundColor=#ffffff;strokeColor=#666666;strokeWidth=3;fillColor=#C2952D;gradientColor=none;fontSize=12;fontColor=#4277BB;" parent="29" vertex="1">
           <mxGeometry x="289" y="32" width="60" height="60" as="geometry" />
         </mxCell>
         <mxCell id="33" value="CONTINUOUS&lt;div&gt;TESTING&lt;/div&gt;" style="aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;image;image=img/lib/ibm/devops/continuous_testing.svg;labelBackgroundColor=#ffffff;strokeColor=#666666;strokeWidth=3;fillColor=#C2952D;gradientColor=none;fontSize=12;fontColor=#4277BB;" parent="29" vertex="1">
           <mxGeometry x="417" y="32" width="60" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="34" value="DevOps" style="text;html=1;align=left;verticalAlign=top;fontColor=#4277BB;shadow=0;dashed=0;strokeColor=none;fillColor=none;labelBackgroundColor=none;fontStyle=0;fontSize=14;spacingLeft=5;" parent="29" vertex="1">
+        <mxCell id="34" value="&lt;b&gt;DevOps&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=top;fontColor=#4277BB;shadow=0;dashed=0;strokeColor=none;fillColor=none;labelBackgroundColor=none;fontStyle=0;fontSize=14;spacingLeft=5;" parent="29" vertex="1">
           <mxGeometry width="90" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="35" value="" style="swimlane;shadow=0;strokeColor=#4277BB;fillColor=#ffffff;fontColor=#4277BB;align=right;startSize=0;collapsible=0;strokeWidth=3;" parent="2" vertex="1">
-          <mxGeometry x="394" y="200" width="516" height="380" as="geometry" />
+        <mxCell id="tF901fyGYfo_4YfBg2au-109" value="" style="dashed=0;outlineConnect=0;html=1;align=center;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.weblogos.github;color=orange" parent="29" vertex="1">
+          <mxGeometry x="76" y="70" width="25.5" height="22" as="geometry" />
         </mxCell>
-        <mxCell id="52" value="CLOUD RUNTIME SERVICES" style="text;html=1;align=left;verticalAlign=top;fontColor=#4277BB;shadow=0;dashed=0;strokeColor=none;fillColor=none;labelBackgroundColor=none;fontStyle=0;fontSize=14;spacingLeft=5;" parent="35" vertex="1">
+        <mxCell id="bHijceM4AnhrFQvCDv7R-94" value="" style="shape=image;imageAspect=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;strokeColor=#6762A6;strokeWidth=3;fillColor=#FFFFFF;image=https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Maven_logo.svg/340px-Maven_logo.svg.png;" vertex="1" parent="29">
+          <mxGeometry x="318" y="76.62" width="60.82" height="15.38" as="geometry" />
+        </mxCell>
+        <mxCell id="bHijceM4AnhrFQvCDv7R-170" value="" style="dashed=0;outlineConnect=0;html=1;align=center;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.weblogos.github;color=orange" vertex="1" parent="29">
+          <mxGeometry x="206" y="70" width="25.5" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="bHijceM4AnhrFQvCDv7R-173" value="" style="shape=image;imageAspect=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;rounded=1;shadow=0;glass=0;sketch=0;strokeColor=#6762A6;strokeWidth=3;fillColor=#FFFFFF;fontSize=12;image=https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Npm-logo.svg/220px-Npm-logo.svg.png;" vertex="1" parent="29">
+          <mxGeometry x="276" y="77.92999999999999" width="36" height="14.07" as="geometry" />
+        </mxCell>
+        <mxCell id="35" value="" style="swimlane;shadow=0;strokeColor=#4277BB;fillColor=#ffffff;fontColor=#4277BB;align=right;startSize=0;collapsible=0;strokeWidth=3;" parent="2" vertex="1">
+          <mxGeometry x="427" y="219" width="516" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="52" value="&lt;b&gt;CLOUD RUNTIME SERVICES&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=top;fontColor=#4277BB;shadow=0;dashed=0;strokeColor=none;fillColor=none;labelBackgroundColor=none;fontStyle=0;fontSize=14;spacingLeft=5;" parent="35" vertex="1">
           <mxGeometry x="2" width="231" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="84" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;entryX=0;entryY=0.5;labelBackgroundColor=#ffffff;startArrow=classic;startFill=1;startSize=4;endArrow=classic;endFill=1;endSize=4;jettySize=auto;orthogonalLoop=1;strokeColor=#EEC11B;strokeWidth=2;fontSize=14;fontColor=#4277BB;" parent="35" source="65" target="68" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="90" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;entryX=0.5;entryY=0;labelBackgroundColor=#ffffff;startArrow=classic;startFill=1;startSize=4;endArrow=classic;endFill=1;endSize=4;jettySize=auto;orthogonalLoop=1;strokeColor=#EEC11B;strokeWidth=2;fontSize=14;fontColor=#4277BB;" parent="35" source="65" target="72" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="65" value="" style="swimlane;shadow=0;strokeColor=#4277BB;fillColor=#ffffff;fontColor=#4277BB;align=right;startSize=0;collapsible=0;strokeWidth=3;" parent="35" vertex="1">
-          <mxGeometry x="329" y="205" width="100" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="66" value="BUG-WARS-AI-CRUD" style="aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;image;image=img/lib/ibm/applications/microservice.svg;labelBackgroundColor=#ffffff;strokeColor=#666666;strokeWidth=3;fillColor=#C2952D;gradientColor=none;fontSize=12;fontColor=#4277BB;" parent="65" vertex="1">
-          <mxGeometry x="9" y="10" width="82" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="tF901fyGYfo_4YfBg2au-108" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/simple-icons/128/heroku-128-black.png" parent="65" vertex="1">
-          <mxGeometry x="-10" y="-5" width="45" height="45" as="geometry" />
-        </mxCell>
-        <mxCell id="68" value="" style="swimlane;shadow=0;strokeColor=#4277BB;fillColor=#ffffff;fontColor=#4277BB;align=right;startSize=0;collapsible=0;strokeWidth=3;" parent="35" vertex="1">
-          <mxGeometry x="329" y="40" width="100" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="69" value="BUG-WARS-GAME-ENGINE" style="aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;image;image=img/lib/ibm/applications/microservice.svg;labelBackgroundColor=#ffffff;strokeColor=#666666;strokeWidth=3;fillColor=#C2952D;gradientColor=none;fontSize=12;fontColor=#4277BB;" parent="68" vertex="1">
-          <mxGeometry x="9" y="10" width="82" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="tF901fyGYfo_4YfBg2au-107" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/simple-icons/128/heroku-128-black.png" parent="68" vertex="1">
-          <mxGeometry x="-10" y="-10" width="45" height="45" as="geometry" />
-        </mxCell>
-        <mxCell id="72" value="" style="swimlane;shadow=0;strokeColor=#4277BB;fillColor=#ffffff;fontColor=#4277BB;align=right;startSize=0;collapsible=0;strokeWidth=3;" parent="35" vertex="1">
-          <mxGeometry x="58.99999999999996" y="190" width="100" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="73" value="EUREKA&lt;br&gt;(SERVICE REGISTRATION /&lt;br&gt;DISCOVERY)" style="aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;image;image=img/lib/ibm/applications/microservice.svg;labelBackgroundColor=#ffffff;strokeColor=#666666;strokeWidth=3;fillColor=#C2952D;gradientColor=none;fontSize=12;fontColor=#4277BB;" parent="72" vertex="1">
-          <mxGeometry x="9" y="10" width="82" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="tF901fyGYfo_4YfBg2au-106" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/simple-icons/128/heroku-128-black.png" parent="72" vertex="1">
-          <mxGeometry x="-10" y="-5" width="45" height="45" as="geometry" />
-        </mxCell>
-        <mxCell id="64" value="CLOUD DATA&lt;div&gt;SERVICES&lt;/div&gt;" style="aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;image;image=img/lib/ibm/data/enterprise_data.svg;labelBackgroundColor=#ffffff;strokeColor=#666666;strokeWidth=3;fillColor=#C2952D;gradientColor=none;fontSize=12;fontColor=#4277BB;" parent="35" vertex="1">
-          <mxGeometry x="449" y="300" width="60" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="63" style="edgeStyle=elbowEdgeStyle;rounded=0;html=1;labelBackgroundColor=#ffffff;startArrow=classic;startFill=1;startSize=4;endArrow=classic;endFill=1;endSize=4;jettySize=auto;orthogonalLoop=1;strokeColor=#4378BB;strokeWidth=2;fontSize=19;fontColor=#CC99FF;elbow=vertical;entryX=1.026;entryY=0.417;entryDx=0;entryDy=0;entryPerimeter=0;" parent="35" source="64" target="65" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="536" y="238" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="587" y="238" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="55" value="" style="swimlane;shadow=0;strokeColor=#4277BB;fillColor=#ffffff;fontColor=#4277BB;align=right;startSize=0;collapsible=0;strokeWidth=3;" parent="2" vertex="1">
-          <mxGeometry x="394" y="596" width="516" height="164" as="geometry" />
-        </mxCell>
-        <mxCell id="56" value="MONITORING &amp;amp;&lt;div&gt;LOGGING&lt;/div&gt;" style="aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;image;image=img/lib/ibm/infrastructure/monitoring_logging.svg;labelBackgroundColor=none;strokeColor=#666666;strokeWidth=3;fillColor=#C2952D;gradientColor=none;fontSize=12;fontColor=#4277BB;" parent="55" vertex="1">
-          <mxGeometry x="34" y="44" width="60" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="58" value="LOAD&amp;nbsp;&lt;span&gt;BALANCING&lt;/span&gt;&lt;div&gt;ROUTING&lt;/div&gt;" style="aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;image;image=img/lib/ibm/infrastructure/load_balancing_routing.svg;labelBackgroundColor=none;strokeColor=#666666;strokeWidth=3;fillColor=#C2952D;gradientColor=none;fontSize=12;fontColor=#4277BB;" parent="55" vertex="1">
-          <mxGeometry x="289" y="44" width="60" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="60" value="HEROKU INFRASTRUCTURE SERVICES" style="text;html=1;align=left;verticalAlign=top;fontColor=#4277BB;shadow=0;dashed=0;strokeColor=none;fillColor=none;labelBackgroundColor=none;fontStyle=0;fontSize=14;spacingLeft=5;" parent="55" vertex="1">
-          <mxGeometry x="1" width="231" height="24" as="geometry" />
-        </mxCell>
-        <mxCell id="18" value="CLOUD SECURITY" style="aspect=fixed;perimeter=ellipsePerimeter;html=1;align=left;shadow=0;dashed=0;image;image=img/lib/ibm/blockchain/certificate_authority.svg;labelBackgroundColor=#ffffff;strokeColor=#666666;strokeWidth=3;fillColor=#C2952D;gradientColor=none;fontSize=12;fontColor=#4277BB;labelPosition=right;verticalLabelPosition=middle;verticalAlign=middle;" parent="55" vertex="1">
-          <mxGeometry x="154" y="44" width="60" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="tF901fyGYfo_4YfBg2au-95" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/simple-icons/128/heroku-128-black.png" parent="2" vertex="1">
-          <mxGeometry x="330" width="45" height="45" as="geometry" />
-        </mxCell>
-        <mxCell id="tF901fyGYfo_4YfBg2au-96" value="API-GATEWAY&lt;br&gt;(Spring Boot Zuul)" style="aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;fontColor=#4277BB;labelBackgroundColor=#ffffff;fontSize=12;spacingTop=3;image;image=img/lib/ibm/applications/index.svg;" parent="2" vertex="1">
-          <mxGeometry x="295" y="266" width="60" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="tF901fyGYfo_4YfBg2au-99" value="BUG-WARS-UI&lt;br&gt;(Angular / Node.js Server)" style="aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;fontColor=#4277BB;labelBackgroundColor=#ffffff;fontSize=12;spacingTop=3;image;image=img/lib/ibm/applications/api_developer_portal.svg;" parent="2" vertex="1">
-          <mxGeometry x="160" y="266" width="60" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="bHijceM4AnhrFQvCDv7R-97" value="" style="shape=image;imageAspect=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;strokeColor=#6762A6;strokeWidth=3;fillColor=#FFFFFF;image=https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png;" vertex="1" parent="2">
-          <mxGeometry x="150" y="595.44" width="113" height="69.1" as="geometry" />
-        </mxCell>
-        <mxCell id="tF901fyGYfo_4YfBg2au-109" value="" style="dashed=0;outlineConnect=0;html=1;align=center;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.weblogos.github;color=orange" parent="1" vertex="1">
-          <mxGeometry x="120" y="100" width="75" height="75" as="geometry" />
-        </mxCell>
-        <mxCell id="tF901fyGYfo_4YfBg2au-114" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn2.iconfinder.com/data/icons/amazon-aws-stencils/100/SDKs_copy_nodeJS-128.png" parent="1" vertex="1">
-          <mxGeometry x="124.82" y="350" width="128" height="128" as="geometry" />
-        </mxCell>
-        <mxCell id="tF901fyGYfo_4YfBg2au-118" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/simple-icons/128/heroku-128-black.png" parent="1" vertex="1">
-          <mxGeometry x="307" y="1370" width="45" height="45" as="geometry" />
-        </mxCell>
-        <mxCell id="tF901fyGYfo_4YfBg2au-121" value="" style="aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;fontColor=#4277BB;labelBackgroundColor=#ffffff;fontSize=12;spacingTop=3;image;image=img/lib/ibm/applications/app_server.svg;strokeColor=#6762a6;strokeWidth=4;fillColor=#c9c3e6;" parent="1" vertex="1">
-          <mxGeometry x="187" y="1200" width="60" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="tF901fyGYfo_4YfBg2au-122" value="" style="aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;fontColor=#4277BB;labelBackgroundColor=#ffffff;fontSize=12;spacingTop=3;image;image=img/lib/ibm/applications/api_polyglot_runtimes.svg;strokeColor=#6762a6;strokeWidth=4;fillColor=#c9c3e6;" parent="1" vertex="1">
-          <mxGeometry x="310" y="1060" width="130" height="130" as="geometry" />
-        </mxCell>
-        <mxCell id="tF901fyGYfo_4YfBg2au-123" value="" style="aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;fontColor=#4277BB;labelBackgroundColor=#ffffff;fontSize=12;spacingTop=3;image;image=img/lib/ibm/applications/automation_tools.svg;strokeColor=#6762a6;strokeWidth=4;fillColor=#c9c3e6;" parent="1" vertex="1">
-          <mxGeometry x="400" y="1280" width="60" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="tF901fyGYfo_4YfBg2au-125" value="" style="aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;fontColor=#4277BB;labelBackgroundColor=#ffffff;fontSize=12;spacingTop=3;image;image=img/lib/ibm/applications/mobile_app.svg;strokeColor=#6762a6;strokeWidth=4;fillColor=#c9c3e6;" parent="1" vertex="1">
-          <mxGeometry x="320" y="1210" width="60" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="tF901fyGYfo_4YfBg2au-126" value="" style="aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;fontColor=#4277BB;labelBackgroundColor=#ffffff;fontSize=12;spacingTop=3;image;image=img/lib/ibm/applications/iot_application.svg;strokeColor=#6762a6;strokeWidth=4;fillColor=#c9c3e6;" parent="1" vertex="1">
-          <mxGeometry x="247" y="1110" width="60" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="tF901fyGYfo_4YfBg2au-135" value="Label" style="label;whiteSpace=wrap;html=1;align=center;verticalAlign=bottom;spacingLeft=0;spacingBottom=4;imageAlign=center;imageVerticalAlign=top;image=img/clipart/Gear_128x128.png;strokeColor=#6762a6;strokeWidth=4;fillColor=#c9c3e6;" parent="1" vertex="1">
-          <mxGeometry x="240" y="1490" width="160" height="110" as="geometry" />
-        </mxCell>
-        <mxCell id="bHijceM4AnhrFQvCDv7R-92" value="" style="aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;fontColor=#4277BB;labelBackgroundColor=#ffffff;fontSize=12;spacingTop=3;image;image=img/lib/ibm/vpc/PublicGateway.svg;fillColor=#EBC01A;" vertex="1" parent="1">
-          <mxGeometry x="94" y="1060" width="90" height="90" as="geometry" />
-        </mxCell>
-        <mxCell id="bHijceM4AnhrFQvCDv7R-94" value="" style="shape=image;imageAspect=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;strokeColor=#6762A6;strokeWidth=3;fillColor=#FFFFFF;image=https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Maven_logo.svg/340px-Maven_logo.svg.png;" vertex="1" parent="1">
-          <mxGeometry x="150" y="510" width="84.82" height="21.45" as="geometry" />
-        </mxCell>
-        <mxCell id="bHijceM4AnhrFQvCDv7R-95" value="" style="shape=image;imageAspect=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;strokeColor=#6762A6;strokeWidth=3;fillColor=#FFFFFF;image=https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/768px-Angular_full_color_logo.svg.png;" vertex="1" parent="1">
-          <mxGeometry x="124.82" y="540" width="110" height="110" as="geometry" />
-        </mxCell>
-        <mxCell id="bHijceM4AnhrFQvCDv7R-96" value="" style="shape=image;imageAspect=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;strokeColor=#6762A6;strokeWidth=3;fillColor=#FFFFFF;image=https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/768px-Bootstrap_logo.svg.png;" vertex="1" parent="1">
-          <mxGeometry x="180" y="657" width="63" height="63" as="geometry" />
-        </mxCell>
-        <mxCell id="bHijceM4AnhrFQvCDv7R-98" value="" style="shape=image;imageAspect=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;strokeColor=#6762A6;strokeWidth=3;fillColor=#FFFFFF;image=https://upload.wikimedia.org/wikipedia/zh/thumb/e/ec/Heroku_logo.svg/1920px-Heroku_logo.svg.png;" vertex="1" parent="1">
-          <mxGeometry x="505.64" y="1247.5" width="120.23" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="bHijceM4AnhrFQvCDv7R-137" value="E" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="690" y="1340" width="160" height="185" as="geometry" />
-        </mxCell>
-        <mxCell id="bHijceM4AnhrFQvCDv7R-131" value="&lt;font color=&quot;#000000&quot; style=&quot;font-size: 12px&quot;&gt;&lt;b&gt;Eureka Server&lt;/b&gt;&lt;br&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontColor=#ffffff;fillColor=#c9c3e6;strokeWidth=4;strokeColor=#6762a6;verticalAlign=top;verticalLabelPosition=bottom;rounded=1;sketch=0;shadow=0;glass=0;labelPosition=center;align=center;" vertex="1" parent="bHijceM4AnhrFQvCDv7R-137">
-          <mxGeometry width="160" height="185" as="geometry" />
-        </mxCell>
-        <mxCell id="bHijceM4AnhrFQvCDv7R-132" value="" style="shape=image;imageAspect=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;strokeColor=#6762A6;strokeWidth=3;fillColor=#FFFFFF;image=https://upload.wikimedia.org/wikipedia/zh/thumb/e/ec/Heroku_logo.svg/1920px-Heroku_logo.svg.png;" vertex="1" parent="bHijceM4AnhrFQvCDv7R-137">
-          <mxGeometry x="19.88000000000011" y="5" width="120.23" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="bHijceM4AnhrFQvCDv7R-133" value="&lt;font color=&quot;#000000&quot;&gt;Eureka&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;strokeWidth=3;fontColor=#ffffff;strokeColor=#6762A6;fillColor=#FFFFFF;verticalAlign=top;labelPosition=center;verticalLabelPosition=bottom;align=center;" vertex="1" parent="bHijceM4AnhrFQvCDv7R-137">
-          <mxGeometry x="39.99000000000001" y="55" width="80" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="bHijceM4AnhrFQvCDv7R-134" value="" style="shape=image;imageAspect=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;rounded=1;shadow=0;glass=0;sketch=0;strokeColor=#6762A6;strokeWidth=3;fillColor=#FFFFFF;fontSize=12;image=https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQhia9kPZoeVXGHJMcQI6JtRrfWYQl6o4QzBA&amp;usqp=CAU;" vertex="1" parent="bHijceM4AnhrFQvCDv7R-137">
-          <mxGeometry x="53.929999999999836" y="68.93000000000006" width="52.14" height="52.14" as="geometry" />
-        </mxCell>
-        <mxCell id="bHijceM4AnhrFQvCDv7R-91" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;strokeWidth=3;fontColor=#ffffff;strokeColor=#6762A6;fillColor=#FFFFFF;" vertex="1" parent="1">
-          <mxGeometry x="525.75" y="1284.25" width="80" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="bHijceM4AnhrFQvCDv7R-90" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;strokeColor=#d6b656;fillColor=#fff2cc;verticalAlign=top;verticalLabelPosition=bottom;image;image=https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_9d63a0ed04b871d3dacc8647b7f0927d/spring-boot.png;labelBackgroundColor=none;" vertex="1" parent="1">
-          <mxGeometry x="520" y="1278.5" width="91.5" height="91.5" as="geometry" />
-        </mxCell>
-        <mxCell id="bHijceM4AnhrFQvCDv7R-162" value="E" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="1241" y="1080" width="130" height="125" as="geometry" />
-        </mxCell>
-        <mxCell id="bHijceM4AnhrFQvCDv7R-155" value="&lt;font color=&quot;#000000&quot; style=&quot;font-size: 12px&quot;&gt;&lt;b&gt;Eureka Server&lt;br&gt;Service Registry&lt;/b&gt;&lt;br&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontColor=#ffffff;fillColor=#c9c3e6;strokeWidth=4;strokeColor=#6762a6;verticalAlign=top;verticalLabelPosition=bottom;rounded=1;sketch=0;shadow=0;glass=0;labelPosition=center;align=center;" vertex="1" parent="bHijceM4AnhrFQvCDv7R-162">
-          <mxGeometry width="130" height="125" as="geometry" />
-        </mxCell>
-        <mxCell id="bHijceM4AnhrFQvCDv7R-156" value="" style="shape=image;imageAspect=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;strokeColor=#6762A6;strokeWidth=3;fillColor=#FFFFFF;image=https://upload.wikimedia.org/wikipedia/zh/thumb/e/ec/Heroku_logo.svg/1920px-Heroku_logo.svg.png;" vertex="1" parent="bHijceM4AnhrFQvCDv7R-162">
-          <mxGeometry x="5.889999999999873" y="1" width="120.23" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="bHijceM4AnhrFQvCDv7R-157" value="" style="group" vertex="1" connectable="0" parent="bHijceM4AnhrFQvCDv7R-162">
-          <mxGeometry x="25" y="37.75" width="80" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="bHijceM4AnhrFQvCDv7R-158" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;strokeWidth=3;fontColor=#ffffff;strokeColor=#6762A6;fillColor=#FFFFFF;verticalAlign=top;labelPosition=center;verticalLabelPosition=bottom;align=center;" vertex="1" parent="bHijceM4AnhrFQvCDv7R-157">
-          <mxGeometry width="80" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="bHijceM4AnhrFQvCDv7R-159" value="" style="shape=image;imageAspect=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;rounded=1;shadow=0;glass=0;sketch=0;strokeColor=#6762A6;strokeWidth=3;fillColor=#FFFFFF;fontSize=12;image=https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQhia9kPZoeVXGHJMcQI6JtRrfWYQl6o4QzBA&amp;usqp=CAU;" vertex="1" parent="bHijceM4AnhrFQvCDv7R-157">
-          <mxGeometry x="13.939999999999827" y="13.930000000000064" width="52.14" height="52.14" as="geometry" />
-        </mxCell>
-        <mxCell id="bHijceM4AnhrFQvCDv7R-163" value="" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="1069" y="1085" width="130" height="125" as="geometry" />
-        </mxCell>
-        <mxCell id="bHijceM4AnhrFQvCDv7R-122" value="&lt;font color=&quot;#000000&quot; style=&quot;font-size: 12px&quot;&gt;&lt;b&gt;Zuul Proxy&lt;br&gt;API Gateway&lt;/b&gt;&lt;br&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontColor=#ffffff;fillColor=#c9c3e6;strokeWidth=4;strokeColor=#6762a6;verticalAlign=top;verticalLabelPosition=bottom;rounded=1;sketch=0;shadow=0;glass=0;labelPosition=center;align=center;" vertex="1" parent="bHijceM4AnhrFQvCDv7R-163">
-          <mxGeometry width="130" height="125" as="geometry" />
-        </mxCell>
-        <mxCell id="bHijceM4AnhrFQvCDv7R-123" value="" style="shape=image;imageAspect=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;strokeColor=#6762A6;strokeWidth=3;fillColor=#FFFFFF;image=https://upload.wikimedia.org/wikipedia/zh/thumb/e/ec/Heroku_logo.svg/1920px-Heroku_logo.svg.png;" vertex="1" parent="bHijceM4AnhrFQvCDv7R-163">
-          <mxGeometry x="5.889999999999873" y="1" width="120.23" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="bHijceM4AnhrFQvCDv7R-140" value="" style="group" vertex="1" connectable="0" parent="bHijceM4AnhrFQvCDv7R-163">
-          <mxGeometry x="25" y="37.75" width="80" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="bHijceM4AnhrFQvCDv7R-125" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;strokeWidth=3;fontColor=#ffffff;strokeColor=#6762A6;fillColor=#FFFFFF;verticalAlign=top;labelPosition=center;verticalLabelPosition=bottom;align=center;" vertex="1" parent="bHijceM4AnhrFQvCDv7R-140">
-          <mxGeometry width="80" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="bHijceM4AnhrFQvCDv7R-130" value="" style="shape=image;imageAspect=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;rounded=1;shadow=0;glass=0;sketch=0;strokeColor=#6762A6;strokeWidth=3;fillColor=#FFFFFF;fontSize=12;image=https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQhia9kPZoeVXGHJMcQI6JtRrfWYQl6o4QzBA&amp;usqp=CAU;" vertex="1" parent="bHijceM4AnhrFQvCDv7R-140">
-          <mxGeometry x="13.939999999999827" y="13.930000000000064" width="52.14" height="52.14" as="geometry" />
-        </mxCell>
-        <mxCell id="bHijceM4AnhrFQvCDv7R-164" value="" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="910" y="1085" width="130" height="125" as="geometry" />
+        <mxCell id="bHijceM4AnhrFQvCDv7R-164" value="" style="group" vertex="1" connectable="0" parent="35">
+          <mxGeometry x="296" y="40" width="130" height="125" as="geometry" />
         </mxCell>
         <mxCell id="bHijceM4AnhrFQvCDv7R-105" value="&lt;font color=&quot;#000000&quot; style=&quot;font-size: 12px&quot;&gt;&lt;b&gt;Spring Boot&lt;br&gt;Game Engine&lt;/b&gt;&lt;br&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontColor=#ffffff;fillColor=#c9c3e6;strokeWidth=4;strokeColor=#6762a6;verticalAlign=top;verticalLabelPosition=bottom;rounded=1;sketch=0;shadow=0;glass=0;labelPosition=center;align=center;" vertex="1" parent="bHijceM4AnhrFQvCDv7R-164">
           <mxGeometry width="130" height="125" as="geometry" />
@@ -316,8 +134,8 @@
         <mxCell id="bHijceM4AnhrFQvCDv7R-110" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;strokeColor=#d6b656;fillColor=#fff2cc;verticalAlign=top;verticalLabelPosition=bottom;image;image=https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_9d63a0ed04b871d3dacc8647b7f0927d/spring-boot.png;labelBackgroundColor=none;" vertex="1" parent="bHijceM4AnhrFQvCDv7R-139">
           <mxGeometry width="91.5" height="91.5" as="geometry" />
         </mxCell>
-        <mxCell id="bHijceM4AnhrFQvCDv7R-165" value="" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="730" y="1085" width="130" height="125" as="geometry" />
+        <mxCell id="bHijceM4AnhrFQvCDv7R-165" value="" style="group" vertex="1" connectable="0" parent="35">
+          <mxGeometry x="193" y="261" width="130" height="125" as="geometry" />
         </mxCell>
         <mxCell id="bHijceM4AnhrFQvCDv7R-143" value="&lt;font color=&quot;#000000&quot; style=&quot;font-size: 12px&quot;&gt;&lt;b&gt;Spring Boot PostgreSQL&lt;br&gt;A.I. Compiler&lt;/b&gt;&lt;br&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontColor=#ffffff;fillColor=#c9c3e6;strokeWidth=4;strokeColor=#6762a6;verticalAlign=top;verticalLabelPosition=bottom;rounded=1;sketch=0;shadow=0;glass=0;labelPosition=center;align=center;" vertex="1" parent="bHijceM4AnhrFQvCDv7R-165">
           <mxGeometry width="130" height="125" as="geometry" />
@@ -336,6 +154,72 @@
         </mxCell>
         <mxCell id="tF901fyGYfo_4YfBg2au-115" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;image=https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Database-postgres.svg/424px-Database-postgres.svg.png;labelBackgroundColor=none;" parent="bHijceM4AnhrFQvCDv7R-148" vertex="1">
           <mxGeometry x="50.75" y="45" width="60" height="51.5" as="geometry" />
+        </mxCell>
+        <mxCell id="bHijceM4AnhrFQvCDv7R-162" value="E" style="group" vertex="1" connectable="0" parent="35">
+          <mxGeometry x="86" y="40" width="130" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="bHijceM4AnhrFQvCDv7R-155" value="&lt;font color=&quot;#000000&quot; style=&quot;font-size: 12px&quot;&gt;&lt;b&gt;Eureka Server&lt;br&gt;Service Registry&lt;/b&gt;&lt;br&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontColor=#ffffff;fillColor=#c9c3e6;strokeWidth=4;strokeColor=#6762a6;verticalAlign=top;verticalLabelPosition=bottom;rounded=1;sketch=0;shadow=0;glass=0;labelPosition=center;align=center;" vertex="1" parent="bHijceM4AnhrFQvCDv7R-162">
+          <mxGeometry width="130" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="bHijceM4AnhrFQvCDv7R-156" value="" style="shape=image;imageAspect=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;strokeColor=#6762A6;strokeWidth=3;fillColor=#FFFFFF;image=https://upload.wikimedia.org/wikipedia/zh/thumb/e/ec/Heroku_logo.svg/1920px-Heroku_logo.svg.png;" vertex="1" parent="bHijceM4AnhrFQvCDv7R-162">
+          <mxGeometry x="5.889999999999873" y="1" width="120.23" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bHijceM4AnhrFQvCDv7R-157" value="" style="group" vertex="1" connectable="0" parent="bHijceM4AnhrFQvCDv7R-162">
+          <mxGeometry x="25" y="37.75" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="bHijceM4AnhrFQvCDv7R-158" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;strokeWidth=3;fontColor=#ffffff;strokeColor=#6762A6;fillColor=#FFFFFF;verticalAlign=top;labelPosition=center;verticalLabelPosition=bottom;align=center;" vertex="1" parent="bHijceM4AnhrFQvCDv7R-157">
+          <mxGeometry width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="bHijceM4AnhrFQvCDv7R-159" value="" style="shape=image;imageAspect=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;rounded=1;shadow=0;glass=0;sketch=0;strokeColor=#6762A6;strokeWidth=3;fillColor=#FFFFFF;fontSize=12;image=https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQhia9kPZoeVXGHJMcQI6JtRrfWYQl6o4QzBA&amp;usqp=CAU;" vertex="1" parent="bHijceM4AnhrFQvCDv7R-157">
+          <mxGeometry x="13.939999999999827" y="13.930000000000064" width="52.14" height="52.14" as="geometry" />
+        </mxCell>
+        <mxCell id="55" value="" style="swimlane;shadow=0;strokeColor=#4277BB;fillColor=#ffffff;fontColor=#4277BB;align=right;startSize=0;collapsible=0;strokeWidth=3;" parent="2" vertex="1">
+          <mxGeometry x="427" y="693" width="516" height="164" as="geometry" />
+        </mxCell>
+        <mxCell id="56" value="MONITORING &amp;amp;&lt;div&gt;LOGGING&lt;/div&gt;" style="aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;image;image=img/lib/ibm/infrastructure/monitoring_logging.svg;labelBackgroundColor=none;strokeColor=#666666;strokeWidth=3;fillColor=#C2952D;gradientColor=none;fontSize=12;fontColor=#4277BB;" parent="55" vertex="1">
+          <mxGeometry x="34" y="44" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="60" value="&lt;b&gt;HEROKU INFRASTRUCTURE SERVICES&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=top;fontColor=#4277BB;shadow=0;dashed=0;strokeColor=none;fillColor=none;labelBackgroundColor=none;fontStyle=0;fontSize=14;spacingLeft=5;" parent="55" vertex="1">
+          <mxGeometry x="1" width="231" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="18" value="CLOUD SECURITY" style="aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;image;image=img/lib/ibm/blockchain/certificate_authority.svg;labelBackgroundColor=#ffffff;strokeColor=#666666;strokeWidth=3;fillColor=#C2952D;gradientColor=none;fontSize=12;fontColor=#4277BB;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;" parent="55" vertex="1">
+          <mxGeometry x="159" y="44" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tF901fyGYfo_4YfBg2au-99" value="BUG-WARS-UI&lt;br&gt;(Angular / Node.js Server)" style="aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;fontColor=#4277BB;labelBackgroundColor=#ffffff;fontSize=12;spacingTop=3;image;image=img/lib/ibm/applications/api_developer_portal.svg;" parent="2" vertex="1">
+          <mxGeometry x="160" y="266" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bHijceM4AnhrFQvCDv7R-97" value="" style="shape=image;imageAspect=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;strokeColor=#6762A6;strokeWidth=3;fillColor=#FFFFFF;image=https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png;" vertex="1" parent="2">
+          <mxGeometry x="130.5" y="590" width="73" height="44.64" as="geometry" />
+        </mxCell>
+        <mxCell id="bHijceM4AnhrFQvCDv7R-163" value="" style="group" vertex="1" connectable="0" parent="2">
+          <mxGeometry x="260" y="376.5" width="130" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="bHijceM4AnhrFQvCDv7R-122" value="&lt;font color=&quot;#000000&quot; style=&quot;font-size: 12px&quot;&gt;&lt;b&gt;Zuul Proxy&lt;br&gt;API Gateway&lt;/b&gt;&lt;br&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fontColor=#ffffff;fillColor=#c9c3e6;strokeWidth=4;strokeColor=#6762a6;verticalAlign=top;verticalLabelPosition=bottom;rounded=1;sketch=0;shadow=0;glass=0;labelPosition=center;align=center;" vertex="1" parent="bHijceM4AnhrFQvCDv7R-163">
+          <mxGeometry width="130" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="bHijceM4AnhrFQvCDv7R-123" value="" style="shape=image;imageAspect=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;strokeColor=#6762A6;strokeWidth=3;fillColor=#FFFFFF;image=https://upload.wikimedia.org/wikipedia/zh/thumb/e/ec/Heroku_logo.svg/1920px-Heroku_logo.svg.png;" vertex="1" parent="bHijceM4AnhrFQvCDv7R-163">
+          <mxGeometry x="5.889999999999873" y="1" width="120.23" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bHijceM4AnhrFQvCDv7R-140" value="" style="group" vertex="1" connectable="0" parent="bHijceM4AnhrFQvCDv7R-163">
+          <mxGeometry x="25" y="37.75" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="bHijceM4AnhrFQvCDv7R-125" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;strokeWidth=3;fontColor=#ffffff;strokeColor=#6762A6;fillColor=#FFFFFF;verticalAlign=top;labelPosition=center;verticalLabelPosition=bottom;align=center;" vertex="1" parent="bHijceM4AnhrFQvCDv7R-140">
+          <mxGeometry width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="bHijceM4AnhrFQvCDv7R-130" value="" style="shape=image;imageAspect=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;rounded=1;shadow=0;glass=0;sketch=0;strokeColor=#6762A6;strokeWidth=3;fillColor=#FFFFFF;fontSize=12;image=https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQhia9kPZoeVXGHJMcQI6JtRrfWYQl6o4QzBA&amp;usqp=CAU;" vertex="1" parent="bHijceM4AnhrFQvCDv7R-140">
+          <mxGeometry x="13.939999999999827" y="13.930000000000064" width="52.14" height="52.14" as="geometry" />
+        </mxCell>
+        <mxCell id="bHijceM4AnhrFQvCDv7R-169" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;fontSize=12;" edge="1" parent="2" source="bHijceM4AnhrFQvCDv7R-122" target="35">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bHijceM4AnhrFQvCDv7R-95" value="" style="shape=image;imageAspect=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;strokeColor=#6762A6;strokeWidth=3;fillColor=#FFFFFF;image=https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/768px-Angular_full_color_logo.svg.png;" vertex="1" parent="2">
+          <mxGeometry x="112" y="470" width="110" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="bHijceM4AnhrFQvCDv7R-96" value="" style="shape=image;imageAspect=0;aspect=fixed;verticalLabelPosition=bottom;verticalAlign=top;strokeColor=#6762A6;strokeWidth=3;fillColor=#FFFFFF;image=https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/768px-Bootstrap_logo.svg.png;" vertex="1" parent="2">
+          <mxGeometry x="182" y="540" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="5" value="BUG WARS MICROSERVICE ARCHITECTURE" style="text;html=1;align=left;verticalAlign=top;fontColor=#4277BB;shadow=0;dashed=0;strokeColor=none;fillColor=none;labelBackgroundColor=none;fontStyle=1;fontSize=16;spacingLeft=5;" parent="1" vertex="1">
+          <mxGeometry x="550" y="105" width="180" height="35" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
