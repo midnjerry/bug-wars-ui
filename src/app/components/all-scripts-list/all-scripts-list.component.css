@@ -2,3 +2,7 @@
   max-height: 65vh;
   overflow-y: auto;
 }
+
+.script-preview {
+  color: darkgrey;
+}

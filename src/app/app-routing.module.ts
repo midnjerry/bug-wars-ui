@@ -14,7 +14,8 @@ const routes: Routes = [
   {path: 'lobby', component:GameLobbyComponent},
   {path: 'ai-editor', component:AiScriptEditorComponent},
   {path: 'about', component:AboutComponent},
-  {path: 'ai-list', component:AiListComponent}
+  {path: 'ai-list', component:AiListComponent},
+  {path: 'ai-editor/:id', component:AiScriptEditorComponent}
 ];
 
 @NgModule({

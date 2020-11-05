@@ -6,13 +6,13 @@
         <div class="row font-weight-bold">
           {{script.name}}
         </div>
-        <div class="row d-none d-sm-block">
+        <div class="row d-none d-sm-block script-preview">
           "{{script.script}}"
         </div>
     </div>
     <span class="d-flex justify-content-end align-items-center">
     <div class="col p-0 mx-3">
-    <button class="btn btn-secondary">Edit AI</button>
+    <a class="btn btn-secondary" routerLink="/ai-editor/{{script.id}}" (click)="autoFill()">Edit AI</a>
   </div>
 </span>
 </span>
