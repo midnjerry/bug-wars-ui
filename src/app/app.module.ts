@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { NgxBootstrapIconsModule, BugFill } from 'ngx-bootstrap-icons';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,6 +21,10 @@ import { CodemirrorModule } from '@ctrl/ngx-codemirror';
 import { AiListComponent } from './pages/ai-list/ai-list.component';
 import { AllScriptsListComponent } from './components/all-scripts-list/all-scripts-list.component';
 import { BugDropdownComponent } from './components/bug-dropdown/bug-dropdown.component';
+
+const icons = {
+  BugFill,
+};
 
 @NgModule({
   declarations: [
@@ -45,6 +50,7 @@ import { BugDropdownComponent } from './components/bug-dropdown/bug-dropdown.com
     FormsModule,
     ReactiveFormsModule,
     CodemirrorModule,
+    NgxBootstrapIconsModule.pick(icons),
   ],
   providers: [],
   bootstrap: [AppComponent],
