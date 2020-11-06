@@ -14,11 +14,13 @@ export class AllScriptsListComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.service.getAllAIScripts().subscribe(res=>this.scripts=res);
+    this.loadScripts();
   }
 
-  autoFill(): void {
-    
+  loadScripts() {
+    this.service.getAllAIScripts().subscribe(res=>{
+      this.scripts=res;
+    });
   }
 
 }

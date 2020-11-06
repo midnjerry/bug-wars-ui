@@ -1,4 +1,5 @@
 import { AIScript } from '../models/aiscript';
+
 export class AIScriptResponse{
     ai: AIScript;
     error: string;
@@ -8,3 +9,4 @@ export class AIScriptResponse{
         this.error = error;
     }
 }
+
