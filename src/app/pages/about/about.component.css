@@ -1,53 +1,10 @@
-
-    /* .container1{
-    padding-left: 50px;
-    margin-bottom: 50;
-
-  }
-  .container2{
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: column;
-    white-space: normal;
-    padding-left: 50px;
-    margin-bottom: 50;
-
-  }
-  .pictureContainer{
-   display: flex;
-   flex-direction: row;
-   padding-left: 50px;
-   padding-top: 100px;
-   justify-content: space-around;
-   align-items: center;
-   align-content: center;
-  }
-
-
-  img {
-      border-radius: 50%;
-      width: 150px;
-  }
-
-  .textRowContainer{
-    padding-top: 50;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-content: space-evenly;
-  }
-  .graphic{
-    width: 50%;
-    border-radius: 0px;
-    margin: 0px 20px 0px 0px;
-  } */
-
-
-  img.team-photo {
+img.team-photo {
     border-radius: 50%;
-    
+
 }
 
-
+p.name-title {
+  line-height: 110%;
+}
 
 
