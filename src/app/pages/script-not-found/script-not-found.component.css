@@ -1,0 +1,8 @@
+#main-menu {
+  min-height: 85vh;
+  justify-content: center;
+}
+
+.text-responsive {
+  font-size: calc(100% + 5vw + 5vh);
+}

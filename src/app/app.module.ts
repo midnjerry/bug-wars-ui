@@ -20,6 +20,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { CodemirrorModule } from '@ctrl/ngx-codemirror';
 import { AiListComponent } from './pages/ai-list/ai-list.component';
 import { AllScriptsListComponent } from './components/all-scripts-list/all-scripts-list.component';
+import { ScriptNotFoundComponent } from './pages/script-not-found/script-not-found.component';
 import { BugDropdownComponent } from './components/bug-dropdown/bug-dropdown.component';
 
 const icons = {
@@ -39,6 +40,7 @@ const icons = {
     AboutComponent,
     AiListComponent,
     AllScriptsListComponent,
+    ScriptNotFoundComponent
     BugDropdownComponent,
   ],
   imports: [
