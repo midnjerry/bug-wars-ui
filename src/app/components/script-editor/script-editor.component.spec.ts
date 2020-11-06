@@ -3,6 +3,7 @@ import { HttpClientTestingModule} from '@angular/common/http/testing';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ScriptEditorComponent } from './script-editor.component';
 import { APIClientService } from '../../services/apiclient.service';
+import {RouterTestingModule} from "@angular/router/testing";
 
 describe('ScriptEditorComponent', () => {
   let component: ScriptEditorComponent;
@@ -13,7 +14,8 @@ describe('ScriptEditorComponent', () => {
     TestBed.configureTestingModule({ imports: [
       HttpClientTestingModule,
       FormsModule,
-      ReactiveFormsModule
+      ReactiveFormsModule,
+      RouterTestingModule
     ],
     declarations: [
       ScriptEditorComponent
