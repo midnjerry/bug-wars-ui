@@ -11,7 +11,7 @@ import { of } from 'rxjs';
 export class APIClientService {
   getAIScript(id: number) {
     const url = environment.getAllAiScriptUrl + '/'+ id;
-    return this.http.get<AIScriptResponse>(url);
+    return this.http.get<AIScriptResponse>(url, {observe : 'response'});
   }
   getAllAIScripts(){
     const url = environment.getAllAiScriptUrl;

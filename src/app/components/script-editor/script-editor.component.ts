@@ -4,7 +4,7 @@ import { AIScriptResponse } from '../../models/aiscript.response';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { HttpErrorResponse } from '@angular/common/http';
 import 'codemirror/addon/display/placeholder.js';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AIScript } from '../../models/aiscript';
 
 @Component({
@@ -15,7 +15,8 @@ import { AIScript } from '../../models/aiscript';
 export class ScriptEditorComponent implements OnInit {
   formScript: FormGroup;
   data;
-  errorMessage: string;
+  err;
+  errorMessage;
   ngOnInit(): void {
     this.loadAIScript();
   }
@@ -29,6 +30,7 @@ export class ScriptEditorComponent implements OnInit {
   };
 
   constructor(
+    private router: Router,
     private service: APIClientService,
     private formBuilder: FormBuilder,
     private route: ActivatedRoute,
@@ -44,10 +46,15 @@ export class ScriptEditorComponent implements OnInit {
     const id = this.route.snapshot.paramMap.get('id');
     if(id !== null) {
       this.service.getAIScript(+id).subscribe(resp => {
-        this.aiScriptResponse = resp;
+        this.aiScriptResponse = resp.body;
         this.formScript.controls['scriptName'].setValue(this.aiScriptResponse.ai.name);
         this.formScript.controls['scriptText'].setValue(this.aiScriptResponse.ai.script);
         this.formScript.controls['scriptId'].setValue(this.aiScriptResponse.ai.id);
+      }, error => {
+        this.err = error.status
+        if(this.err == 404){
+          this.router.navigate(['/script-not-found']);
+        }
       });
     }
   }
@@ -91,11 +98,3 @@ export class ScriptEditorComponent implements OnInit {
     }
   }
 }
-
-// constructor (private dataService: DataService){
-//   dataService.getCompaniesCount().subscribe(res => {
-//     this.companyCount = res.count);
-//     // more code that depends on `res.count` being set goes here
-//   });
-//   dataService.getCompaniesCount().subscribe(res => console.log(res.count)); //works
-// }

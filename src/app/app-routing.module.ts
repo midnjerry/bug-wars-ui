@@ -5,6 +5,7 @@ import { GameLobbyComponent } from './pages/game-lobby/game-lobby.component';
 import { AiScriptEditorComponent } from './pages/ai-script-editor/ai-script-editor.component';
 import { AboutComponent } from './pages/about/about.component';
 import { AiListComponent } from './pages/ai-list/ai-list.component';
+import { ScriptNotFoundComponent } from './pages/script-not-found/script-not-found.component';
 
 
 
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path: 'ai-editor', component:AiScriptEditorComponent},
   {path: 'about', component:AboutComponent},
   {path: 'ai-list', component:AiListComponent},
-  {path: 'ai-editor/:id', component:AiScriptEditorComponent}
+  {path: 'ai-editor/:id', component:AiScriptEditorComponent},
+  {path: 'script-not-found', component:ScriptNotFoundComponent}
 ];
 
 @NgModule({
