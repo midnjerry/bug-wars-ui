@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { NgxBootstrapIconsModule, BugFill } from 'ngx-bootstrap-icons';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,8 +13,7 @@ import { AiDropdownsComponent } from './components/ai-dropdowns/ai-dropdowns.com
 import { MapCarouselComponent } from './components/map-carousel/map-carousel.component';
 
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AboutComponent } from './pages/about/about.component';
@@ -21,6 +21,11 @@ import { CodemirrorModule } from '@ctrl/ngx-codemirror';
 import { AiListComponent } from './pages/ai-list/ai-list.component';
 import { AllScriptsListComponent } from './components/all-scripts-list/all-scripts-list.component';
 import { ScriptNotFoundComponent } from './pages/script-not-found/script-not-found.component';
+import { BugDropdownComponent } from './components/bug-dropdown/bug-dropdown.component';
+
+const icons = {
+  BugFill,
+};
 
 @NgModule({
   declarations: [
@@ -36,19 +41,20 @@ import { ScriptNotFoundComponent } from './pages/script-not-found/script-not-fou
     AiListComponent,
     AllScriptsListComponent,
     ScriptNotFoundComponent
+    BugDropdownComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     NoopAnimationsModule,
-    FontAwesomeModule,
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
-    CodemirrorModule
+    CodemirrorModule,
+    NgxBootstrapIconsModule.pick(icons),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

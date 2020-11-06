@@ -1,0 +1,14 @@
+<div class="bug">
+  <i-bs
+    [class]="color"
+    [style]="{ paddingRight: '1em' }"
+    name="bug-fill"
+    width="32"
+    height="32"
+  ></i-bs>
+  <select>
+    <option *ngFor="let option of options">
+      {{ option }}
+    </option>
+  </select>
+</div>
