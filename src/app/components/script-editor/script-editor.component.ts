@@ -1,10 +1,11 @@
 import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
 import { APIClientService } from '../../services/apiclient.service';
-import { AIScript } from '../../models/aiscript';
+import { AIScriptResponse } from '../../models/aiscript.response';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { HttpErrorResponse } from '@angular/common/http';
 import 'codemirror/addon/display/placeholder.js';
 import { ActivatedRoute } from '@angular/router';
+import { AIScript } from '../../models/aiscript';
 
 @Component({
   selector: 'app-script-editor',
@@ -18,7 +19,8 @@ export class ScriptEditorComponent implements OnInit {
   ngOnInit(): void {
     this.loadAIScript();
   }
-  aiScript: AIScript = new AIScript(null, '', '');
+  aiScriptResponse: AIScriptResponse = new AIScriptResponse(new AIScript(null, "", ""), "");
+  example: string;
 
   options = {
     lineNumbers: true,
@@ -32,24 +34,22 @@ export class ScriptEditorComponent implements OnInit {
     private route: ActivatedRoute,
   ) {
     this.formScript = this.formBuilder.group({
-      scriptName: this.aiScript.name,
-      scriptText: this.aiScript.script,
-      scriptId: this.aiScript.id
+      scriptName: this.aiScriptResponse.ai.name,
+      scriptText: this.aiScriptResponse.ai.script,
+      scriptId: this.aiScriptResponse.ai.id
     });
   }
 
   loadAIScript(): void {
     const id = this.route.snapshot.paramMap.get('id');
-    console.log(id);
     if(id !== null) {
-      this.service.getAIScript(+id).subscribe(script => this.aiScript = script);
+      this.service.getAIScript(+id).subscribe(resp => {
+        this.aiScriptResponse = resp;
+        this.formScript.controls['scriptName'].setValue(this.aiScriptResponse.ai.name);
+        this.formScript.controls['scriptText'].setValue(this.aiScriptResponse.ai.script);
+        this.formScript.controls['scriptId'].setValue(this.aiScriptResponse.ai.id);
+      });
     }
-    //this.service.getAIScript(id).subscribe(script => this.aiScript = script);
-    console.log(id);
-    console.log(this.aiScript);
-    this.formScript.controls['scriptName'].setValue(this.aiScript.name);
-    this.formScript.controls['scriptText'].setValue(this.aiScript.script);
-    this.formScript.controls['scriptId'].setValue(this.aiScript.id);
   }
 
   onSubmit() {
@@ -91,3 +91,11 @@ export class ScriptEditorComponent implements OnInit {
     }
   }
 }
+
+// constructor (private dataService: DataService){
+//   dataService.getCompaniesCount().subscribe(res => {
+//     this.companyCount = res.count);
+//     // more code that depends on `res.count` being set goes here
+//   });
+//   dataService.getCompaniesCount().subscribe(res => console.log(res.count)); //works
+// }

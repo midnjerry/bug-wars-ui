@@ -10,7 +10,8 @@ import { of } from 'rxjs';
 })
 export class APIClientService {
   getAIScript(id: number) {
-    return of(new AIScript(1, 'test', 'test'));
+    const url = environment.getAllAiScriptUrl + '/'+ id;
+    return this.http.get<AIScriptResponse>(url);
   }
   getAllAIScripts(){
     const url = environment.getAllAiScriptUrl;
