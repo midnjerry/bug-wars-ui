@@ -40,8 +40,8 @@ const icons = {
     AboutComponent,
     AiListComponent,
     AllScriptsListComponent,
-    ScriptNotFoundComponent
-    BugDropdownComponent,
+    ScriptNotFoundComponent,
+    BugDropdownComponent
   ],
   imports: [
     BrowserModule,
