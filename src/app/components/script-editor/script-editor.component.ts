@@ -72,13 +72,14 @@ export class ScriptEditorComponent implements OnInit {
       this.service.createAIScript(returnScript).subscribe(
         (results) => {
           console.log('Data is received - Result - ', results);
-          this.data = results.ai;
-        },
-        (error: HttpErrorResponse) => {
-          this.errorMessage = 'Failed to connect.';
-          if (error.message) {
-            this.errorMessage = error.statusText;
+          this.data = results.body.ai;
+          if (results.status == 200){
+            this.errorMessage = 'Successfully Saved AI Script';
           }
+        },
+        error => {
+          this.errorMessage = error.error.error;
+          
         }
       );
     }
@@ -86,14 +87,16 @@ export class ScriptEditorComponent implements OnInit {
       this.service.updateAIScript(returnScript).subscribe(
         (results) => {
           console.log('Data is received - Result - ', results);
-          this.data = results.ai;
+          this.data = results.body.ai;
+          if (results.status == 200){
+            this.errorMessage = 'Successfully Updated AI Script';
+          }
         },
-        (error: HttpErrorResponse) => {
-          this.errorMessage = 'Failed to connect.';
-          if (error.message) {
-            this.errorMessage = error.statusText;
+        error => {
+          this.errorMessage = error.error.error;
+          
         }
-      }
+        
     );
     }
   }

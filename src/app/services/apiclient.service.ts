@@ -28,12 +28,12 @@ export class APIClientService {
 
   createAIScript(input: AIScript){
     const url = environment.getAllAiScriptUrl;
-    return this.http.post<AIScriptResponse>(url, input);
+    return this.http.post<AIScriptResponse>(url, input, {observe : 'response'});
   }
 
   updateAIScript(input: AIScript){
     const {id}= input;
     const url = environment.getAllAiScriptUrl + '/'+ id;
-    return this.http.put<AIScriptResponse>(url, input);
+    return this.http.put<AIScriptResponse>(url, input, {observe : 'response'});
   }
 }
