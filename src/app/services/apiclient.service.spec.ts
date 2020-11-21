@@ -1,6 +1,6 @@
 import { TestBed, inject } from '@angular/core/testing';
 import { APIClientService } from './apiclient.service';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpResponse } from '@angular/common/http';
 import {
   HttpClientTestingModule,
   HttpTestingController,
@@ -58,7 +58,7 @@ describe('APIClientService', () => {
       const response: AIScriptResponse = new AIScriptResponse(save, null);
 
       apiClient.createAIScript(input).subscribe((data) => {
-        expect(data).toEqual(response);
+        expect(data.body).toEqual(response);
       });
 
       const req = httpTestingController.expectOne(
@@ -78,7 +78,7 @@ describe('APIClientService', () => {
       const response: AIScriptResponse = new AIScriptResponse(input, null);
 
       apiClient.updateAIScript(input).subscribe((data) => {
-        expect(data).toEqual(response);
+        expect(data.body).toEqual(response);
       });
 
       const req = httpTestingController.expectOne(
