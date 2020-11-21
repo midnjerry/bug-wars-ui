@@ -22,6 +22,7 @@ import { AiListComponent } from './pages/ai-list/ai-list.component';
 import { AllScriptsListComponent } from './components/all-scripts-list/all-scripts-list.component';
 import { ScriptNotFoundComponent } from './pages/script-not-found/script-not-found.component';
 import { BugDropdownComponent } from './components/bug-dropdown/bug-dropdown.component';
+import { MapComponent } from './components/map/map.component';
 
 const icons = {
   BugFill,
@@ -41,7 +42,8 @@ const icons = {
     AiListComponent,
     AllScriptsListComponent,
     ScriptNotFoundComponent,
-    BugDropdownComponent
+    BugDropdownComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,

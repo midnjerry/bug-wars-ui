@@ -6,6 +6,7 @@ import { AiScriptEditorComponent } from './pages/ai-script-editor/ai-script-edit
 import { AboutComponent } from './pages/about/about.component';
 import { AiListComponent } from './pages/ai-list/ai-list.component';
 import { ScriptNotFoundComponent } from './pages/script-not-found/script-not-found.component';
+import { MapComponent } from './components/map/map.component';
 
 
 
@@ -17,7 +18,8 @@ const routes: Routes = [
   {path: 'about', component:AboutComponent},
   {path: 'ai-list', component:AiListComponent},
   {path: 'ai-editor/:id', component:AiScriptEditorComponent},
-  {path: 'script-not-found', component:ScriptNotFoundComponent}
+  {path: 'script-not-found', component:ScriptNotFoundComponent},
+  {path: 'map', component:MapComponent}
 ];
 
 @NgModule({
