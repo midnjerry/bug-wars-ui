@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GameLobbyComponent implements OnInit {
   public colors = ['text-info', 'text-danger', 'text-warning', 'text-success'];
-  public options = ['this', 'that', 'the', 'other'];
+  public options = ['Attack', 'Kill', 'Jump', 'turnLeft'];
   public slides = [
     {
       src: 'https://incompetech.com/graphpaper/lite/1024%20boxes.png',
