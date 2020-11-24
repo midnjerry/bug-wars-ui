@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { trigger, transition, style, animate, useAnimation } from "@angular/animations";
 import { scaleIn, scaleOut} from "./map-carousel.animations";
+import * as fs from "fs";
 
 @Component({
   selector: 'map-carousel',
@@ -33,6 +34,9 @@ export class MapCarouselComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.slides = fs.readdirSync("/assets/images/ground").forEach(file => {
+      console.log(file);
+    }) 
   }
 
 }
