@@ -23,6 +23,7 @@ import { AllScriptsListComponent } from './components/all-scripts-list/all-scrip
 import { ScriptNotFoundComponent } from './pages/script-not-found/script-not-found.component';
 import { BugDropdownComponent } from './components/bug-dropdown/bug-dropdown.component';
 import { MapComponent } from './components/map/map.component';
+import { GamePlayScreenComponent } from './components/game-play-screen/game-play-screen.component';
 
 const icons = {
   BugFill,
@@ -43,7 +44,8 @@ const icons = {
     AllScriptsListComponent,
     ScriptNotFoundComponent,
     BugDropdownComponent,
-    MapComponent
+    MapComponent,
+    GamePlayScreenComponent
   ],
   imports: [
     BrowserModule,
