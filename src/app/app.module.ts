@@ -30,6 +30,7 @@ const icons = {
   BugFill,
 };
 
+
 @NgModule({
   declarations: [
     AppComponent,

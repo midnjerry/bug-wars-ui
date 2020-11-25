@@ -1,5 +1,6 @@
-<p>Testing</p>
+<div class="countdown">
 
-<countdown [config]="{leftTime: 300}"></countdown>
+  <countdown #countdown [config]="{leftTime: 5}" (event)="onTimerFinished($event)"></countdown>
 
-<!--  -->
+</div>
+

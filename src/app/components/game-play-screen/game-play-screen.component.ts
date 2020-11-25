@@ -13,4 +13,12 @@ export class GamePlayScreenComponent implements OnInit {
 
   }
 
+  onTimerFinished(e:Event){
+   if (e["action"] == "done"){
+     alert("Time is up");
+    }
+  }
+
+
+
 }
