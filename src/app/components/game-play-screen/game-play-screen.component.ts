@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 
 export class GamePlayScreenComponent implements OnInit {
 
+  message: String;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -15,10 +17,8 @@ export class GamePlayScreenComponent implements OnInit {
 
   onTimerFinished(e:Event){
    if (e["action"] == "done"){
-     alert("Time is up");
+     this.message = "Time is up!"
     }
   }
-
-
 
 }
