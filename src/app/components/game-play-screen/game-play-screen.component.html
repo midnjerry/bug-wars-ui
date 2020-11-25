@@ -1,7 +1,7 @@
 <div class="countdown">
 
-  <countdown #countdown [config]="{leftTime: 5}" (event)="onTimerFinished($event)"></countdown>
-  <div>{{ message }}</div>
+  <!-- <countdown #countdown [config]="{leftTime: 5}" (event)="onTimerFinished($event)"></countdown> -->
+  <div>{{ counter | formatTime }}</div>
 
 </div>
 
