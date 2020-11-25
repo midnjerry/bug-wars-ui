@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxBootstrapIconsModule, BugFill } from 'ngx-bootstrap-icons';
+import { CountdownModule } from 'ngx-countdown';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -57,6 +58,7 @@ const icons = {
     ReactiveFormsModule,
     CodemirrorModule,
     NgxBootstrapIconsModule.pick(icons),
+    CountdownModule
   ],
   providers: [],
   bootstrap: [AppComponent],

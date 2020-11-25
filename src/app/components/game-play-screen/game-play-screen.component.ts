@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 @Component({
   selector: 'app-game-play-screen',
   templateUrl: './game-play-screen.component.html',
@@ -9,7 +8,8 @@ export class GamePlayScreenComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
 
+  ngOnInit(): void {
+
+  }
 }
