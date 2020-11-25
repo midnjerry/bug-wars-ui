@@ -23,7 +23,7 @@ export class MapComponent implements OnInit {
     this.ground1.src = "./assets/images/tiles/ground/Ground_Tile_01_C.png";
     this.ground2.src = "./assets/images/tiles/ground/Ground_Tile_02_C.png";
     this.block.src = "./assets/images/tiles/blocks/Block_A_02.png";
-    
+
   }
 
   animate(): void {
