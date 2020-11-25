@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { APIClientService } from '../../services/apiclient.service';
 
 @Component({
   selector: 'app-bug-dropdown',
@@ -8,8 +9,19 @@ import { Component, Input, OnInit } from '@angular/core';
 export class BugDropdownComponent implements OnInit {
   @Input() color: string;
   @Input() options: string[];
+  scripts;
 
-  constructor() {}
+  constructor(
+    private service: APIClientService,
+  ) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.loadScripts();
+  }
+
+  loadScripts() {
+    this.service.getAllAIScripts().subscribe(res=>{
+      this.scripts=res;
+    });
+  }
 }
