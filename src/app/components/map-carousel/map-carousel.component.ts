@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { trigger, transition, style, animate, useAnimation } from "@angular/animations";
-import { scaleIn, scaleOut} from "./map-carousel.animations";
+import { scaleIn, scaleOut } from "./map-carousel.animations";
 
 @Component({
   selector: 'map-carousel',
