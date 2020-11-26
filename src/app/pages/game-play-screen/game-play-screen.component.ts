@@ -12,12 +12,12 @@ export class GamePlayScreenComponent implements OnInit {
   countDown: Subscription;
 
   counter = 3; // 5 min
-  tick = 1000; // second
+  delayInMilliseconds = 1000; // second
 
   constructor() { }
 
   ngOnInit(): void {
-    this.countDown = timer(0, this.tick).subscribe(() => --this.counter);
+    this.countDown = timer(0, this.delayInMilliseconds).subscribe(() => --this.counter);
   }
 
   ngOnDestroy() {

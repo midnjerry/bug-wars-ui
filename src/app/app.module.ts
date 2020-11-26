@@ -24,7 +24,7 @@ import { AllScriptsListComponent } from './components/all-scripts-list/all-scrip
 import { ScriptNotFoundComponent } from './pages/script-not-found/script-not-found.component';
 import { BugDropdownComponent } from './components/bug-dropdown/bug-dropdown.component';
 import { MapComponent } from './components/map/map.component';
-import { GamePlayScreenComponent, FormatTimePipe } from './components/game-play-screen/game-play-screen.component';
+import { GamePlayScreenComponent, FormatTimePipe } from './pages/game-play-screen/game-play-screen.component';
 
 const icons = {
   BugFill,

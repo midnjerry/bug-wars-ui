@@ -7,7 +7,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { AiListComponent } from './pages/ai-list/ai-list.component';
 import { ScriptNotFoundComponent } from './pages/script-not-found/script-not-found.component';
 import { MapComponent } from './components/map/map.component';
-import { GamePlayScreenComponent } from './components/game-play-screen/game-play-screen.component';
+import { GamePlayScreenComponent } from './pages/game-play-screen/game-play-screen.component';
 
 
 const routes: Routes = [
