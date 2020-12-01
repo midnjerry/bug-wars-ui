@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GamePlayScreenComponent } from './game-play-screen.component';
+import { FormatTimePipe, GamePlayScreenComponent } from './game-play-screen.component';
 
 describe('GamePlayScreenComponent', () => {
   let component: GamePlayScreenComponent;
@@ -8,9 +8,8 @@ describe('GamePlayScreenComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GamePlayScreenComponent ]
-    })
-    .compileComponents();
+      declarations: [GamePlayScreenComponent, FormatTimePipe],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
