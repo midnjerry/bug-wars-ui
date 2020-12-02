@@ -9,6 +9,7 @@ import {
 } from '@angular/core';
 import { ImageAlt, Square } from 'ngx-bootstrap-icons';
 import { APIClientService } from 'src/app/services/apiclient.service';
+import { BugInfo} from 'src/app/models/bug-info';
 
 @Component({
   selector: 'app-map',
@@ -114,4 +115,23 @@ export class MapComponent implements OnInit, AfterViewInit {
   getRandomIndex(length: number): number {
     return Math.floor(Math.random() * length);
   }
+
+  removeBug(x: number,y: number): number {
+    //  Zero is a placeholder
+    return 0;
+  };
+
+  setBug(bug: BugInfo): BugInfo{
+    return bug;
+  };
+
+  addFood(x: number, y: number): number {
+    // Zero is a placeholder
+    return 0;
+  };
+
+  removeFood(x: number, y: number): number{
+    // Zero is a placeholder
+    return 0;
+  };
 }
