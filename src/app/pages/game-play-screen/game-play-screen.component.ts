@@ -39,7 +39,19 @@ export class FormatTimePipe implements PipeTransform {
     const minutes: number = Math.floor(value / 60);
 
     if (value < 0) {
-      return "Time is up!"
+
+      let winner = 'poop';
+
+      switch(winner){
+        case 'winner': 
+          return "Winner!";
+          break;
+        default: 
+          return "It's a draw!";
+          break;
+      }
+
+
     }
 
     return (
