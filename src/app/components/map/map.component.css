@@ -1,1 +1,4 @@
-canvas { border-style: solid }
+canvas {
+  display: block;
+  border-style: solid;
+}
