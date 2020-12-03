@@ -87,7 +87,7 @@ export class MapComponent implements OnInit, AfterViewInit {
               let h: number = 256 * j;
               context.drawImage(this.ground1, w, h);
               this.displayWall(context);
-              this.setBug(2, 2);
+              this.setBug(3, 3);
               break;
             }
             case 1: {
@@ -95,7 +95,7 @@ export class MapComponent implements OnInit, AfterViewInit {
               let h: number = 256 * j;
               context.drawImage(this.ground2, w, h);
               this.displayWall(context);
-              this.setBug(2,2);
+              this.setBug(3, 3);
               break;
             }
           }
@@ -117,12 +117,30 @@ export class MapComponent implements OnInit, AfterViewInit {
   setBug(x: number,y: number){
     this.bug1.onload = (): void => {
       console.log('bug');
-        x = (128 * x) + 26;
-        y = (128 * y) + 26;
-        this.ctx.drawImage(this.bug1, x, y, 76, 76);
-      }
+      x = 128 * x + 26;
+      y = 128 * y + 26;
+      this.ctx.drawImage(this.bug1, x, y, 76, 76);
+
+      // facing east
+      // this.rotateAndPaintImage(this.ctx, this.bug1, 1.57, x, y, 0, 76);
+
+      // facing south
+      // this.rotateAndPaintImage(this.ctx, this.bug1, 3.14, x, y, 76, 76);
+
+      // facing west
+      // this.rotateAndPaintImage(this.ctx, this.bug1, 4.71, x, y, 76, 0);
+
+    }
     this.bug1.src = './assets/images/blue-bug.png';
   };
+
+  rotateAndPaintImage ( context, image, angleInRad , positionX, positionY, axisX, axisY ) {
+    context.translate( positionX, positionY );
+    context.rotate( angleInRad );
+    context.drawImage( image, -axisX, -axisY, 76, 76 );
+    context.rotate( -angleInRad );
+    context.translate( -positionX, -positionY );
+}
 
   addFood(x: number, y: number): number {
     // Zero is a placeholder
