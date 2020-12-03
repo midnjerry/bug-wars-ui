@@ -110,45 +110,72 @@ export class MapComponent implements OnInit, AfterViewInit {
     return Math.floor(Math.random() * length);
   }
 
-  removeBug(x: number,y: number): number {
+  removeBug(x: number, y: number): number {
     return 0;
-  };
+  }
 
-  setBug(x: number,y: number){
+  setBug(x: number, y: number) {
     this.bug1.onload = (): void => {
       console.log('bug');
       x = 128 * x + 26;
       y = 128 * y + 26;
       this.ctx.drawImage(this.bug1, x, y, 76, 76);
-
-      // facing east
-      // this.rotateAndPaintImage(this.ctx, this.bug1, 1.57, x, y, 0, 76);
-
-      // facing south
-      // this.rotateAndPaintImage(this.ctx, this.bug1, 3.14, x, y, 76, 76);
-
-      // facing west
-      // this.rotateAndPaintImage(this.ctx, this.bug1, 4.71, x, y, 76, 0);
-
-    }
+      this.rotateBug(this.ctx, x, y);
+    };
     this.bug1.src = './assets/images/blue-bug.png';
-  };
+  }
 
-  rotateAndPaintImage ( context, image, angleInRad , positionX, positionY, axisX, axisY ) {
-    context.translate( positionX, positionY );
-    context.rotate( angleInRad );
-    context.drawImage( image, -axisX, -axisY, 76, 76 );
-    context.rotate( -angleInRad );
-    context.translate( -positionX, -positionY );
-}
+  rotateAndPaintImage(
+    context,
+    image,
+    angleInRad,
+    positionX,
+    positionY,
+    axisX,
+    axisY
+  ) {
+    context.translate(positionX, positionY);
+    context.rotate(angleInRad);
+    context.drawImage(image, -axisX, -axisY, 76, 76);
+    context.rotate(-angleInRad);
+    context.translate(-positionX, -positionY);
+  }
+
+  rotateBug(context, x: number, y: number) {
+    context.onload = (): void => {
+      let i = 1;
+      var animationInterval = setInterval(function () {
+        console.log('hello');
+
+        if (i % 4 == 0) {
+          // facing west
+          console.log(this.bug1);
+          this.rotateAndPaintImage(this.ctx, this.bug1, 4.71, x, y, 76, 0);
+        } else if (i % 3 == 0) {
+          // facing south
+          this.rotateAndPaintImage(this.ctx, this.bug1, 3.14, x, y, 76, 76);
+        } else if (i % 2 == 0) {
+          // facing east
+          this.rotateAndPaintImage(this.ctx, this.bug1, 1.57, x, y, 0, 76);
+        } else {
+          context.drawImage(this.bug1, x, y, 76, 76);
+        }
+        if (i == 500) {
+          clearInterval(animationInterval);
+        }
+        i++;
+      }, 100);
+    };
+    this.bug1.src = './assets/images/blue-bug.png';
+  }
 
   addFood(x: number, y: number): number {
     // Zero is a placeholder
     return 0;
-  };
+  }
 
-  removeFood(x: number, y: number): number{
+  removeFood(x: number, y: number): number {
     // Zero is a placeholder
     return 0;
-  };
+  }
 }
