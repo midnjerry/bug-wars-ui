@@ -26,6 +26,7 @@ export class MapComponent implements OnInit, AfterViewInit {
   ground2 = new Image();
   block = new Image();
   ground_img = new Image();
+  bug1 = new Image();
 
   constructor(private apiClient: APIClientService) {}
 
@@ -54,11 +55,8 @@ export class MapComponent implements OnInit, AfterViewInit {
     }
   }
 
-  /// TODO properly calculate x and y position for block(s) overlayed on
-  /// ground tile image in canvas
   displayWall(context): void {
     this.block.onload = (): void => {
-      console.log('wall');
       for (var i = 0; i < 6; i++) {
         for (var j = 0; j < 6; j++) {
           if (
@@ -78,8 +76,6 @@ export class MapComponent implements OnInit, AfterViewInit {
     this.block.src = './assets/images/tiles/blocks/Block_A_02.png';
   }
 
-  /// TODO properly calculate the width (w) and height (h) for image inside of canvas
-  /// based on resolution of screen
   displayFloor(context): void {
     onload = (): void => {
       console.log('floor');
@@ -89,19 +85,17 @@ export class MapComponent implements OnInit, AfterViewInit {
             case 0: {
               let w: number = 256 * i;
               let h: number = 256 * j;
-              // this.ground1.onload = (): void => {
               context.drawImage(this.ground1, w, h);
-              // }
               this.displayWall(context);
+              this.setBug(2, 2);
               break;
             }
             case 1: {
               let w: number = 256 * i;
               let h: number = 256 * j;
-              // this.ground2.onload = (): void => {
               context.drawImage(this.ground2, w, h);
-              // }
               this.displayWall(context);
+              this.setBug(2,2);
               break;
             }
           }
@@ -117,12 +111,17 @@ export class MapComponent implements OnInit, AfterViewInit {
   }
 
   removeBug(x: number,y: number): number {
-    //  Zero is a placeholder
     return 0;
   };
 
-  setBug(bug: BugInfo): BugInfo{
-    return bug;
+  setBug(x: number,y: number){
+    this.bug1.onload = (): void => {
+      console.log('bug');
+        x = (128 * x) + 26;
+        y = (128 * y) + 26;
+        this.ctx.drawImage(this.bug1, x, y, 76, 76);
+      }
+    this.bug1.src = './assets/images/blue-bug.png';
   };
 
   addFood(x: number, y: number): number {

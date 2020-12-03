@@ -1,4 +1,4 @@
-import { info } from "console";
+// import { info } from "console";
 
 export class BugInfo{
     id: number;
