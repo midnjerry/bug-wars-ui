@@ -7,7 +7,7 @@ import {
   OnInit,
   AfterViewInit,
 } from '@angular/core';
-import { ImageAlt, Square } from 'ngx-bootstrap-icons';
+import { ImageAlt, Square, Bug } from 'ngx-bootstrap-icons';
 import { APIClientService } from 'src/app/services/apiclient.service';
 import { BugInfo} from 'src/app/models/bug-info';
 
@@ -27,6 +27,7 @@ export class MapComponent implements OnInit, AfterViewInit {
   block = new Image();
   ground_img = new Image();
   bug1 = new Image();
+  bug2 = new Image();
 
   constructor(private apiClient: APIClientService) {}
 
@@ -121,7 +122,31 @@ export class MapComponent implements OnInit, AfterViewInit {
         y = (128 * y) + 26;
         this.ctx.drawImage(this.bug1, x, y, 76, 76);
       }
+    this.bug2.src = './assets/images/red-bug.png';
     this.bug1.src = './assets/images/blue-bug.png';
+    this.moveBug(this.ctx, x, y, this.bug1, this.bug2);
+  };
+
+  moveBug(context, x: number, y: number, bug1, bug2){
+    this.bug1.onload = (): void => {
+      let i = 1;
+      var animationInterval = setInterval(function() {
+        console.log("hello");
+        if(i%2 == 0){
+          context.drawImage(bug1, x, y, 76, 76);
+        }
+        if(i%2 == 1){
+          context.drawImage(bug2, x, y, 76, 76);
+        }
+        if(i == 500){
+          clearInterval(animationInterval);
+        }
+        i++;
+
+    }, 100);
+    }
+  // this.bug1.src = './assets/images/blue-bug.png';
+  // this.bug2.src = './assets/images/red-bug.png';
   };
 
   addFood(x: number, y: number): number {
