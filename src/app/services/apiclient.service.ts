@@ -1,3 +1,4 @@
+import { Game } from './../models/game';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
@@ -35,5 +36,11 @@ export class APIClientService {
     const {id}= input;
     const url = environment.getAllAiScriptUrl + '/'+ id;
     return this.http.put<AIScriptResponse>(url, input, {observe : 'response'});
+  }
+
+  playGame(game: Game): Game {
+
+    return game;
+    
   }
 }

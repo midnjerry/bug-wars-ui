@@ -1,3 +1,4 @@
+import { APIClientService } from 'src/app/services/apiclient.service';
 import { timer, Subscription } from 'rxjs';
 import { Component, OnInit, Pipe, PipeTransform } from '@angular/core';
 @Component({
@@ -23,13 +24,6 @@ export class GamePlayScreenComponent implements OnInit {
   ngOnDestroy() {
     this.countDown = null;
   }
-
-  // onTimerFinished(e:Event){
-  //  if (e["action"] == "done"){
-  //    this.message = "Time is up!"
-  //   }
-  // }
-
 }
 @Pipe({
   name: "formatTime"
@@ -40,18 +34,14 @@ export class FormatTimePipe implements PipeTransform {
 
     if (value < 0) {
 
-      let winner = 'poop';
+      let winner = 'winner';
 
       switch(winner){
-        case 'winner': 
+        case 'winner':
           return "Winner!";
-          break;
-        default: 
+        default:
           return "It's a draw!";
-          break;
       }
-
-
     }
 
     return (
@@ -60,4 +50,5 @@ export class FormatTimePipe implements PipeTransform {
       ("00" + Math.floor(value - minutes * 60)).slice(-2)
     );
   }
+
 }
