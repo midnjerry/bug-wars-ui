@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Pipe } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxBootstrapIconsModule, BugFill } from 'ngx-bootstrap-icons';
 
@@ -23,10 +23,12 @@ import { AllScriptsListComponent } from './components/all-scripts-list/all-scrip
 import { ScriptNotFoundComponent } from './pages/script-not-found/script-not-found.component';
 import { BugDropdownComponent } from './components/bug-dropdown/bug-dropdown.component';
 import { MapComponent } from './components/map/map.component';
+import { GamePlayScreenComponent, FormatTimePipe } from './pages/game-play-screen/game-play-screen.component';
 
 const icons = {
   BugFill,
 };
+
 
 @NgModule({
   declarations: [
@@ -43,7 +45,9 @@ const icons = {
     AllScriptsListComponent,
     ScriptNotFoundComponent,
     BugDropdownComponent,
-    MapComponent
+    MapComponent,
+    GamePlayScreenComponent,
+    FormatTimePipe,
   ],
   imports: [
     BrowserModule,
