@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { trigger, transition, style, animate, useAnimation } from "@angular/animations";
-import { scaleIn, scaleOut } from "./map-carousel.animations";
+import { trigger, transition, useAnimation } from '@angular/animations';
+import { scaleIn, scaleOut } from './map-carousel.animations';
 
 @Component({
   selector: 'map-carousel',
@@ -44,12 +44,12 @@ export class MapCarouselComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.map1.src = './assets/images/tiles/ground/Ground_Tile_01_A.pg';
-    this.map2.src = './assets/images/tiles/ground/Ground_Tile_02_A.pg';
-    this.map3.src = './assets/images/tiles/ground/Ground_Tile_01_B.pg';
-    this.map4.src = './assets/images/tiles/ground/Ground_Tile_01_A.pg';
-    this.map5.src = './assets/images/tiles/ground/Ground_Tile_01_A.pg';
-    this.map6.src = './assets/images/tiles/ground/Ground_Tile_01_A.pg';
+    this.map1.src = './assets/images/tiles/ground/Ground_Tile_01_A.png';
+    this.map2.src = './assets/images/tiles/ground/Ground_Tile_02_A.png';
+    this.map3.src = './assets/images/tiles/ground/Ground_Tile_01_B.png';
+    this.map4.src = './assets/images/tiles/ground/Ground_Tile_01_A.png';
+    this.map5.src = './assets/images/tiles/ground/Ground_Tile_01_A.png';
+    this.map6.src = './assets/images/tiles/ground/Ground_Tile_01_A.png';
     this.slides = [
       this.map1,
       this.map2,
