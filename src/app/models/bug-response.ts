@@ -1,4 +1,4 @@
-export class Bug {
+export class BugResponse {
   team: number;
   direction: string;
   command: string;
