@@ -14,6 +14,7 @@ import { MapData } from '../models/map-data';
 import { BugInfo } from '../models/bug-info';
 import { GameState } from '../models/game-state';
 import { GameResultResponse } from '../models/game-result.response';
+import { CompiledScriptResponse } from '../models/compiled-script.response';
 
 describe('APIClientService', () => {
   let httpClient: HttpClient;
@@ -117,6 +118,25 @@ describe('APIClientService', () => {
       );
 
       expect(req.request.method).toEqual('POST');
+      req.flush(response);
+    });
+  });
+
+  describe('compileCode()', () => {
+    it('should call endpoint from environment file and retrieve objectCode', () => {
+      const input: number = 1;
+      const expectedCode: number[] = [0, 0, 0, 0];
+      const response: CompiledScriptResponse = new CompiledScriptResponse(1, expectedCode, null);
+
+      apiClient.compileCode(input).subscribe((data) => {
+        expect(data.body).toEqual(response);
+      });
+
+      const req = httpTestingController.expectOne(
+        environment.getAllAiScriptUrl + '/1/compile'
+      );
+
+      expect(req.request.method).toEqual('GET');
       req.flush(response);
     });
   });
