@@ -7,6 +7,7 @@ import { AIScriptResponse} from '../models/aiscript.response';
 import { Observable, of } from 'rxjs';
 import { GameResultResponse } from '../models/game-result.response';
 import { Game } from '../models/game';
+import { CompiledScriptResponse } from '../models/compiled-script.response';
 
 @Injectable({
   providedIn: 'root'
@@ -36,6 +37,11 @@ export class APIClientService {
   playGame(input: Game){
     const url = environment.gamePlayUrl;
     return this.http.post<GameResultResponse>(url, input, {observe : 'response'});
+  }
+
+  compileCode(id: number){
+    const url = environment.getAllAiScriptUrl + '/' + id + '/compile';
+    return this.http.get<CompiledScriptResponse>(url, {observe : 'response'});
   }
 
   getMap(id: number): Observable<HttpResponse<MapData>> {
