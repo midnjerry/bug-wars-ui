@@ -9,9 +9,11 @@ import {
   ApplicationRef,
   NgZone,
 } from '@angular/core';
-import { ImageAlt, Square, Bug } from 'ngx-bootstrap-icons';
+import { ImageAlt, Square } from 'ngx-bootstrap-icons';
 import { APIClientService } from 'src/app/services/apiclient.service';
 import { BugInfo} from 'src/app/models/bug-info';
+import { Bug } from 'src/app/models/bug';
+import { DirectionInfo } from '../../models/direction-info';
 
 @Component({
   selector: 'app-map',
@@ -40,6 +42,7 @@ export class MapComponent implements OnInit, AfterViewInit {
   bug6 = new Image();
   bug7 = new Image();
   bug8 = new Image();
+  bugs = [this.bug1, this.bug2, this.bug3, this.bug4, this.bug5, this.bug6, this.bug7, this.bug8];
 
   constructor(private apiClient: APIClientService, private zone:NgZone) {}
 
@@ -47,6 +50,12 @@ export class MapComponent implements OnInit, AfterViewInit {
     this.apiClient
       .getMap(1)
       .subscribe((response) => (this.mapData = response.body));
+
+    this.bugs.forEach((element, index) => {
+      element.src = './assets/images/bugwalk-'+ (index+1) + '.png';
+      console.log(element);
+    });
+
   }
 
   ngAfterViewInit(): void {
@@ -101,7 +110,6 @@ export class MapComponent implements OnInit, AfterViewInit {
               let h: number = 256 * j;
               context.drawImage(this.ground1, w, h);
               this.displayWall(context);
-              this.setBug(2,2);
               break;
             }
             case 1: {
@@ -109,7 +117,6 @@ export class MapComponent implements OnInit, AfterViewInit {
               let h: number = 256 * j;
               context.drawImage(this.ground2, w, h);
               this.displayWall(context);
-              this.setBug(2,2);
               break;
             }
           }
@@ -128,23 +135,13 @@ export class MapComponent implements OnInit, AfterViewInit {
     return 0;
   }
 
-  setBug(x: number, y: number) {
-    this.bug1.onload = (): void => {
-      console.log('bug');
-        x = (128 * x) + 26;
-        y = (128 * y) + 26;
-        //this.ctxBug.drawImage(this.bug1, x, y, 76, 76);
-        //this.animateMoveBug(x, y, 'NORTH').then(res => f2());
-        // this.animateMoveBug(x, y, 'NORTH');
-      }
-    this.bug1.src = './assets/images/bugwalk-1.png';
-    this.bug2.src = './assets/images/bugwalk-2.png';
-    this.bug3.src = './assets/images/bugwalk-3.png';
-    this.bug4.src = './assets/images/bugwalk-4.png';
-    this.bug5.src = './assets/images/bugwalk-5.png';
-    this.bug6.src = './assets/images/bugwalk-6.png';
-    this.bug7.src = './assets/images/bugwalk-7.png';
-    this.bug8.src = './assets/images/bugwalk-8.png';
+
+  setBug(bug: Bug) {
+      let x = (128 * bug.endX) + 26;
+      let y = (128 * bug.endY) + 26;
+      let directionInfo = this.getDirection(bug.direction);
+      this.ctxBug.clearRect(x, y, 76, 76);
+      this.rotateAndPaintImage(this.ctxBug,this.bugs[7],directionInfo.rotRadians,x,y,directionInfo.offsetX,directionInfo.offsetY)
   };
 
   rotateAndPaintImage(context,image,angleInRad,positionX,positionY,axisX,axisY) {
@@ -155,251 +152,68 @@ export class MapComponent implements OnInit, AfterViewInit {
     context.translate(-positionX, -positionY);
   }
 
-  walkCircle(x, y) {
-    this.bug8.onload = (): void => {
-      x = (128 * x) + 26;
-      y = (128 * y) + 26;
-      this.animateMoveBug(x, y, 'NORTH');
-    }
-    this.bug1.src = './assets/images/bugwalk-1.png';
-    this.bug2.src = './assets/images/bugwalk-2.png';
-    this.bug3.src = './assets/images/bugwalk-3.png';
-    this.bug4.src = './assets/images/bugwalk-4.png';
-    this.bug5.src = './assets/images/bugwalk-5.png';
-    this.bug6.src = './assets/images/bugwalk-6.png';
-    this.bug7.src = './assets/images/bugwalk-7.png';
-    this.bug8.src = './assets/images/bugwalk-8.png';
+  moveButton() {
+    this.moveBug(new Bug(1, "NORTH", "move", false, 2, 2, 2, 1));
+    this.moveBug(new Bug(1, "EAST", "move", false, 1, 2, 2, 2));
+    this.moveBug(new Bug(1, "SOUTH", "move", false, 1, 1, 1, 2));
+    this.moveBug(new Bug(1, "WEST", "move", false, 2, 1, 1, 1));
+
+    this.moveBug(new Bug(1, "NORTH", "move", false, 4, 4, 4, 3));
+    this.moveBug(new Bug(1, "EAST", "move", false, 3, 4, 4, 4));
+    this.moveBug(new Bug(1, "SOUTH", "move", false, 3, 3, 3, 4));
+    this.moveBug(new Bug(1, "WEST", "move", false, 4, 3, 3, 3));
+
+    this.moveBug(new Bug(1, "NORTH", "move", false, 4, 2, 4, 1));
+    this.moveBug(new Bug(1, "EAST", "move", false, 3, 2, 4, 2));
+    this.moveBug(new Bug(1, "SOUTH", "move", false, 3, 1, 3, 2));
+    this.moveBug(new Bug(1, "WEST", "move", false, 4, 1, 3, 1));
+
+    this.moveBug(new Bug(1, "NORTH", "move", false, 2, 4, 2, 3));
+    this.moveBug(new Bug(1, "EAST", "move", false, 1, 4, 2, 4));
+    this.moveBug(new Bug(1, "SOUTH", "move", false, 1, 3, 1, 4));
+    this.moveBug(new Bug(1, "WEST", "move", false, 2, 3, 1, 3));
   }
 
-  animateMoveBug(x: number, y: number, direction: string) {
+  moveBug(bug: Bug){
+    var directionInfo = this.getDirection(bug.direction);
+    var startX = (128 * bug.startX) + 26;
+    var startY = (128 * bug.startY) + 26;
+    var endX = (128 * bug.endX) + 26;
+    var endY = (128 * bug.endY) + 26;
+    var differenceX = (endX - startX)/8;
+    var differenceY = (endY - startY)/8;
     var self = this;
     let i = 1;
-    var rotDegrees;
-    var offsetX;
-    var offsetY;
-
-    switch(direction) {
-      case "EAST":
-        rotDegrees = 1.57;
-        offsetX = 0;
-        offsetY = 76;
-        break;
-      case "SOUTH":
-        rotDegrees = 3.14;
-        offsetX = 76;
-        offsetY = 76;
-        break;
-      case "WEST":
-        rotDegrees = 4.71;
-        offsetX = 76;
-        offsetY = 0;
-        break;
-      default:
-        rotDegrees = 6.28319;
-        offsetX = 0;
-        offsetY = 0;
-    }
-
-    self.ctxBug.clearRect(x, y,100,100);
 
     function walking() {
-      if(i>24){
-        let endY = y+128+64;
-        let endX = x+64;
-        rotDegrees = 4.71;
-        offsetY = 76;
-        offsetX = 0;
+      self.ctxBug.clearRect(startX+(differenceX*(i-1)), startY+(differenceY*(i-1)), 76, 76);
+      self.rotateAndPaintImage(
+        self.ctxBug, self.bugs[i-1], directionInfo.rotRadians, startX+(differenceX*i), startY+(differenceY*i), directionInfo.offsetX, directionInfo.offsetY
+      );
 
-        switch (i % 8) {
-          case 1:
-              self.ctxBug.clearRect(0, 0,500,500);
-              self.rotateAndPaintImage(self.ctxBug, self.bug8, rotDegrees, endX+112, endY, offsetX, offsetY);
-              break;
-          case 2:
-              self.ctxBug.clearRect(0, 0,500,500);
-              self.rotateAndPaintImage(self.ctxBug, self.bug7, rotDegrees, endX+96, endY, offsetX, offsetY);
-              break;
-          case 3:
-              self.ctxBug.clearRect(0, 0,500,500);
-              self.rotateAndPaintImage(self.ctxBug, self.bug6, rotDegrees, endX+80, endY, offsetX, offsetY);
-              break;
-          case 4:
-              self.ctxBug.clearRect(0, 0,500,500);
-              self.rotateAndPaintImage(self.ctxBug, self.bug5, rotDegrees, endX+64, endY, offsetX, offsetY);
-              break;
-          case 5:
-              self.ctxBug.clearRect(0, 0,500,500);
-              self.rotateAndPaintImage(self.ctxBug, self.bug4, rotDegrees,endX+48, endY, offsetX, offsetY);
-              break;
-          case 6:
-              self.ctxBug.clearRect(0, 0,500,500);
-              self.rotateAndPaintImage(self.ctxBug, self.bug3, rotDegrees, endX+32, endY, offsetX, offsetY);
-              break;
-          case 7:
-              self.ctxBug.clearRect(0, 0,500,500);
-              self.rotateAndPaintImage(self.ctxBug, self.bug2, rotDegrees, endX+16, endY, offsetX, offsetY);
-              break;
-          case 0:
-              self.ctxBug.clearRect(0, 0,500,500);
-              self.rotateAndPaintImage(self.ctxBug, self.bug1, rotDegrees,endX, endY, offsetX, offsetY);
-              break;
-        }
-    } else if(i>16){
-        let end = x+112+13;
-        rotDegrees = 3.14;
-        offsetY = 76;
-        offsetX = 76;
-
-        switch (i % 8) {
-          case 1:
-              self.ctxBug.clearRect(0, 0,500,500);
-              self.rotateAndPaintImage(self.ctxBug, self.bug8, rotDegrees, end, y, offsetX, offsetY);
-              break;
-          case 2:
-              self.ctxBug.clearRect(0, 0,500,500);
-              self.rotateAndPaintImage(self.ctxBug, self.bug7, rotDegrees, end, y+16, offsetX, offsetY);
-              break;
-          case 3:
-              self.ctxBug.clearRect(0, 0,500,500);
-              self.rotateAndPaintImage(self.ctxBug, self.bug6, rotDegrees, end, y+32, offsetX, offsetY);
-              break;
-          case 4:
-              self.ctxBug.clearRect(0, 0,500,500);
-              self.rotateAndPaintImage(self.ctxBug, self.bug5, rotDegrees, end, y+48, offsetX, offsetY);
-              break;
-          case 5:
-              self.ctxBug.clearRect(0, 0,500,500);
-              self.rotateAndPaintImage(self.ctxBug, self.bug4, rotDegrees, end, y+64, offsetX, offsetY);
-              break;
-          case 6:
-              self.ctxBug.clearRect(0, 0,500,500);
-              self.rotateAndPaintImage(self.ctxBug, self.bug3, rotDegrees, end, y+80, offsetX, offsetY);
-              break;
-          case 7:
-              self.ctxBug.clearRect(0, 0,500,500);
-              self.rotateAndPaintImage(self.ctxBug, self.bug2, rotDegrees, end, y+96, offsetX, offsetY);
-              break;
-          case 0:
-              self.ctxBug.clearRect(0, 0,500,500);
-              self.rotateAndPaintImage(self.ctxBug, self.bug1, rotDegrees, end, y+112, offsetX, offsetY);
-              break;
-        }
-    } else if(i>8){
-      rotDegrees = 1.57;
-      offsetY = 76;
-
-      switch (i % 8) {
-        case 1:
-            self.ctxBug.clearRect(0, 0,500,500);
-            self.rotateAndPaintImage(self.ctxBug, self.bug8, rotDegrees, x+16, y, offsetX, offsetY);
-            break;
-        case 2:
-            self.ctxBug.clearRect(0, 0,500,500);
-            self.rotateAndPaintImage(self.ctxBug, self.bug7, rotDegrees, x+32, y, offsetX, offsetY);
-            break;
-        case 3:
-            self.ctxBug.clearRect(0, 0,500,500);
-            self.rotateAndPaintImage(self.ctxBug, self.bug6, rotDegrees, x+48, y, offsetX, offsetY);
-            break;
-        case 4:
-            self.ctxBug.clearRect(0, 0,500,500);
-            self.rotateAndPaintImage(self.ctxBug, self.bug5, rotDegrees, x+64, y, offsetX, offsetY);
-            break;
-        case 5:
-            self.ctxBug.clearRect(0, 0,500,500);
-            self.rotateAndPaintImage(self.ctxBug, self.bug4, rotDegrees, x+80, y, offsetX, offsetY);
-            break;
-        case 6:
-            self.ctxBug.clearRect(0, 0,500,500);
-            self.rotateAndPaintImage(self.ctxBug, self.bug3, rotDegrees, x+96, y, offsetX, offsetY);
-            break;
-        case 7:
-            self.ctxBug.clearRect(0, 0,500,500);
-            self.rotateAndPaintImage(self.ctxBug, self.bug2, rotDegrees, x+112, y, offsetX, offsetY);
-            break;
-        case 0:
-            self.ctxBug.clearRect(0, 0,500,500);
-            self.rotateAndPaintImage(self.ctxBug, self.bug1, rotDegrees, x+128+13, y, offsetX, offsetY);
-            break;
-      }
-    } else {
-      switch (i % 8) {
-        case 0:
-            self.ctxBug.clearRect(0, 0,500,500);
-            self.rotateAndPaintImage(self.ctxBug, self.bug8, rotDegrees, x, y, offsetX, offsetY);
-            break;
-        case 1:
-            self.ctxBug.clearRect(0, 0,500,500);
-            self.rotateAndPaintImage(self.ctxBug, self.bug7, rotDegrees, x, y+112, offsetX, offsetY);
-            break;
-        case 2:
-            self.ctxBug.clearRect(0, 0,500,500);
-            self.rotateAndPaintImage(self.ctxBug, self.bug6, rotDegrees, x, y+96, offsetX, offsetY);
-            break;
-        case 3:
-            self.ctxBug.clearRect(0, 0,500,500);
-            self.rotateAndPaintImage(self.ctxBug, self.bug5, rotDegrees, x, y+80, offsetX, offsetY);
-            break;
-        case 4:
-            self.ctxBug.clearRect(0, 0,500,500);
-            self.rotateAndPaintImage(self.ctxBug, self.bug4, rotDegrees, x, y+64, offsetX, offsetY);
-            break;
-        case 5:
-            self.ctxBug.clearRect(0, 0,500,500);
-            self.rotateAndPaintImage(self.ctxBug, self.bug3, rotDegrees, x, y+48, offsetX, offsetY);
-            break;
-        case 6:
-            self.ctxBug.clearRect(0, 0,500,500);
-            self.rotateAndPaintImage(self.ctxBug, self.bug2, rotDegrees, x, y+32, offsetX, offsetY);
-            break;
-        case 7:
-            self.ctxBug.clearRect(0, 0,500,500);
-            self.rotateAndPaintImage(self.ctxBug, self.bug1, rotDegrees, x, y+16, offsetX, offsetY);
-            break;
-      }
-    }
-
-    if(i == 32) {
-      clearInterval(interval);
-    }
-
-      // if (i == 8) {
-      //   clearInterval(interval);
-      // }
-      i++;
-      console.log(i);
-    }
-    var interval = setInterval(walking, 125);
-    return new Promise((resolve, reject) => {
-      resolve();
-  });
-  }
-
-  rotateBug(x: number, y: number) {
-    var self = this;
-    let i = 1;
-
-    function foo() {
-      if (i % 4 == 0) {
-        // facing west
-        console.log(self.bug1);
-        self.rotateAndPaintImage(self.ctx, self.bug1, 4.71, x, y, 76, 0);
-      } else if (i % 3 == 0) {
-        // facing south
-        self.rotateAndPaintImage(self.ctx, self.bug1, 3.14, x, y, 76, 76);
-      } else if (i % 2 == 0) {
-        // facing east
-        self.rotateAndPaintImage(self.ctx, self.bug1, 1.57, x, y, 0, 76);
-      } else {
-        console.log("YO");
-        self.ctx.drawImage(self.bug1, x, y, 76, 76);
-      }
-      if (i == 20) {
+      if(i == 8) {
         clearInterval(interval);
       }
       i++;
     }
-    var interval = setInterval(foo, 100);
+    var interval = setInterval(walking, 125);
+  }
+
+  getDirection(direction: string): DirectionInfo {
+    switch(direction) {
+      case "EAST":
+        return new DirectionInfo(1.57, 0, 76);
+        break;
+      case "SOUTH":
+        return new DirectionInfo(3.14, 76, 76);
+        break;
+      case "WEST":
+        return new DirectionInfo(4.71, 76, 0);
+        break;
+      default:
+        return new DirectionInfo(6.28, 0, 0);
+        break;
+    }
   }
 
   addFood(x: number, y: number): number {
