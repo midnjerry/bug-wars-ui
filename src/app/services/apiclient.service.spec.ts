@@ -8,6 +8,12 @@ import {
 import { AIScript } from '../models/aiscript';
 import { environment } from 'src/environments/environment';
 import { AIScriptResponse } from '../models/aiscript.response';
+import { Game } from '../models/game';
+import { GameResult } from '../models/game-result';
+import { MapData } from '../models/map-data';
+import { BugInfo } from '../models/bug-info';
+import { GameState } from '../models/game-state';
+import { GameResultResponse } from '../models/game-result.response';
 
 describe('APIClientService', () => {
   let httpClient: HttpClient;
@@ -86,6 +92,31 @@ describe('APIClientService', () => {
       );
 
       expect(req.request.method).toEqual('PUT');
+      req.flush(response);
+    });
+  });
+
+  describe('playGame()', () => {
+    it('should call endpoint from environment file and retrieve gameResult', () => {
+      const inputMap: MapData = new MapData();
+      const inputBugInfos: BugInfo[] = [new BugInfo(), new BugInfo()];
+      const input: Game = new Game(null, inputMap, inputBugInfos, 300, 12345);
+
+      const expectedWinners: number[] = [1, 2, 3]
+      const expectedGameStates: GameState[] = [new GameState(), new GameState(), new GameState()]
+      const expectedResult: GameResult = new GameResult("DRAW", expectedWinners, expectedGameStates);
+
+      const response: GameResultResponse = new GameResultResponse(expectedResult, null);
+
+      apiClient.playGame(input).subscribe((data) => {
+        expect(data.body).toEqual(response);
+      });
+
+      const req = httpTestingController.expectOne(
+        environment.gamePlayUrl
+      );
+
+      expect(req.request.method).toEqual('POST');
       req.flush(response);
     });
   });

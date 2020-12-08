@@ -12,8 +12,8 @@ import {
 import { ImageAlt, Square } from 'ngx-bootstrap-icons';
 import { APIClientService } from 'src/app/services/apiclient.service';
 import { BugInfo} from 'src/app/models/bug-info';
-import { Bug } from 'src/app/models/bug';
 import { DirectionInfo } from '../../models/direction-info';
+import { BugResponse } from '../../models/bug-response';
 
 @Component({
   selector: 'app-map',
@@ -136,7 +136,7 @@ export class MapComponent implements OnInit, AfterViewInit {
   }
 
 
-  setBug(bug: Bug) {
+  setBug(bug: BugResponse) {
       let x = (128 * bug.endX) + 26;
       let y = (128 * bug.endY) + 26;
       let directionInfo = this.getDirection(bug.direction);
@@ -153,28 +153,28 @@ export class MapComponent implements OnInit, AfterViewInit {
   }
 
   moveButton() {
-    this.moveBug(new Bug(1, "NORTH", "move", false, 2, 2, 2, 1));
-    this.moveBug(new Bug(1, "EAST", "move", false, 1, 2, 2, 2));
-    this.moveBug(new Bug(1, "SOUTH", "move", false, 1, 1, 1, 2));
-    this.moveBug(new Bug(1, "WEST", "move", false, 2, 1, 1, 1));
+    this.moveBug(new BugResponse(1, "NORTH", "move", false, 2, 2, 2, 1));
+    this.moveBug(new BugResponse(1, "EAST", "move", false, 1, 2, 2, 2));
+    this.moveBug(new BugResponse(1, "SOUTH", "move", false, 1, 1, 1, 2));
+    this.moveBug(new BugResponse(1, "WEST", "move", false, 2, 1, 1, 1));
 
-    this.moveBug(new Bug(1, "NORTH", "move", false, 4, 4, 4, 3));
-    this.moveBug(new Bug(1, "EAST", "move", false, 3, 4, 4, 4));
-    this.moveBug(new Bug(1, "SOUTH", "move", false, 3, 3, 3, 4));
-    this.moveBug(new Bug(1, "WEST", "move", false, 4, 3, 3, 3));
+    this.moveBug(new BugResponse(1, "NORTH", "move", false, 4, 4, 4, 3));
+    this.moveBug(new BugResponse(1, "EAST", "move", false, 3, 4, 4, 4));
+    this.moveBug(new BugResponse(1, "SOUTH", "move", false, 3, 3, 3, 4));
+    this.moveBug(new BugResponse(1, "WEST", "move", false, 4, 3, 3, 3));
 
-    this.moveBug(new Bug(1, "NORTH", "move", false, 4, 2, 4, 1));
-    this.moveBug(new Bug(1, "EAST", "move", false, 3, 2, 4, 2));
-    this.moveBug(new Bug(1, "SOUTH", "move", false, 3, 1, 3, 2));
-    this.moveBug(new Bug(1, "WEST", "move", false, 4, 1, 3, 1));
+    this.moveBug(new BugResponse(1, "NORTH", "move", false, 4, 2, 4, 1));
+    this.moveBug(new BugResponse(1, "EAST", "move", false, 3, 2, 4, 2));
+    this.moveBug(new BugResponse(1, "SOUTH", "move", false, 3, 1, 3, 2));
+    this.moveBug(new BugResponse(1, "WEST", "move", false, 4, 1, 3, 1));
 
-    this.moveBug(new Bug(1, "NORTH", "move", false, 2, 4, 2, 3));
-    this.moveBug(new Bug(1, "EAST", "move", false, 1, 4, 2, 4));
-    this.moveBug(new Bug(1, "SOUTH", "move", false, 1, 3, 1, 4));
-    this.moveBug(new Bug(1, "WEST", "move", false, 2, 3, 1, 3));
+    this.moveBug(new BugResponse(1, "NORTH", "move", false, 2, 4, 2, 3));
+    this.moveBug(new BugResponse(1, "EAST", "move", false, 1, 4, 2, 4));
+    this.moveBug(new BugResponse(1, "SOUTH", "move", false, 1, 3, 1, 4));
+    this.moveBug(new BugResponse(1, "WEST", "move", false, 2, 3, 1, 3));
   }
 
-  moveBug(bug: Bug){
+  moveBug(bug: BugResponse){
     var directionInfo = this.getDirection(bug.direction);
     var startX = (128 * bug.startX) + 26;
     var startY = (128 * bug.startY) + 26;

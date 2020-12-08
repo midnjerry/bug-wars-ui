@@ -5,6 +5,8 @@ import { environment } from 'src/environments/environment';
 import { AIScript } from '../models/aiscript';
 import { AIScriptResponse} from '../models/aiscript.response';
 import { Observable, of } from 'rxjs';
+import { GameResultResponse } from '../models/game-result.response';
+import { Game } from '../models/game';
 
 @Injectable({
   providedIn: 'root'
@@ -16,13 +18,6 @@ export class APIClientService {
   }
   getAllAIScripts(){
     const url = environment.getAllAiScriptUrl;
-    // // response = this.http.get(url).subscribe()
-    // let response: AIScriptResponse;
-    // this.http.get(url).subscribe(res => {
-    //     // response =
-    //     this.getAllAIScripts();
-    // });
-
     return this.http.get<AIScript[]>(url);
   }
   constructor(private http: HttpClient) { }
@@ -36,6 +31,11 @@ export class APIClientService {
     const {id}= input;
     const url = environment.getAllAiScriptUrl + '/'+ id;
     return this.http.put<AIScriptResponse>(url, input, {observe : 'response'});
+  }
+
+  playGame(input: Game){
+    const url = environment.gamePlayUrl;
+    return this.http.post<GameResultResponse>(url, input, {observe : 'response'});
   }
 
   getMap(id: number): Observable<HttpResponse<MapData>> {
