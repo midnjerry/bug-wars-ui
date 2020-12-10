@@ -1,7 +1,8 @@
-<div class="countdown">
-
-  <!-- <countdown #countdown [config]="{leftTime: 5}" (event)="onTimerFinished($event)"></countdown> -->
-  <div>{{ counter | formatTime }}</div>
-
+<div class="container">
+    <div class="countdown">
+      <!-- <countdown #countdown [config]="{leftTime: 5}" (event)="onTimerFinished($event)"></countdown> -->
+      <div class="p-3">{{ counter | formatTime }}</div>
+    </div>
+    <!-- pass in each gamestate to map -->
+    <app-map></app-map>
 </div>
-

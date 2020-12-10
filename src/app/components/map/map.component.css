@@ -1,5 +1,5 @@
 canvas {
   display: block;
-  border-style: solid;
   position: absolute;
+  height: 60%;
 }

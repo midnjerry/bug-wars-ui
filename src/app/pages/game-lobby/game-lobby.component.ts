@@ -24,4 +24,8 @@ export class GameLobbyComponent implements OnInit {
   ];
   constructor() {}
   ngOnInit(): void {}
+
+  beginGame() {
+
+  }
 }
