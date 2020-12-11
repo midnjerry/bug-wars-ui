@@ -7,7 +7,7 @@
     height="32"
   ></i-bs>
   <select [(ngModel)]="selectedScript" (change)="selected()">
-    <option *ngFor="let script of scripts">
+    <option *ngFor="let script of scripts" [ngValue]="script" >
       {{ script.name }}
     </option>
   </select>

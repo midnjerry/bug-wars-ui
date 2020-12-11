@@ -20,12 +20,21 @@ export class BugDropdownComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadScripts();
+    console.log("Testing this!");
   }
 
   loadScripts() {
-    this.service.getAllAIScripts().subscribe(res=>{
-      this.scripts=res;
-    });
+    // this.service.getAllAIScripts().subscribe(res=>{
+    //   this.scripts=res;
+    // });
+
+    this.scripts = [
+      { name: 'Arizona', abbrev: 'AZ'},
+      { name: 'California', abbrev: 'CA' },
+      { name: 'Colorado', abbrev: 'CO' },
+      { name: 'New York', abbrev: 'NY' },
+      { name: 'Pennsylvania', abbrev: 'PA' },
+    ];
   }
 
   selected(){
